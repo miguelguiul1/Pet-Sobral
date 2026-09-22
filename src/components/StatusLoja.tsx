@@ -1,4 +1,3 @@
-import { business } from '@/data/business'
 import { useAgora } from '@/hooks/useAgora'
 import { statusLoja } from '@/lib/opening-hours'
 import { cn } from '@/lib/utils'
@@ -18,7 +17,7 @@ export function StatusLoja({ className, compacto = false }: { className?: string
   const s = agora ? statusLoja(agora) : null
   return (
     <p
-      className={cn('inline-flex items-center gap-2 text-sm font-semibold', className)}
+      className={cn('inline-flex min-h-5 items-center gap-2 text-sm font-semibold whitespace-nowrap', className)}
       data-status-loja={s?.estado ?? 'neutro'}
       aria-live="polite"
     >
@@ -34,7 +33,8 @@ export function StatusLoja({ className, compacto = false }: { className?: string
           </span>
         </>
       ) : (
-        <span className="font-medium">{business.horarioTexto.curto}</span>
+        // Estado neutro curto (uma linha): evita deslocar o layout quando o status real aparece
+        <span className="font-medium">{compacto ? 'Seg a sáb' : 'Aberto de segunda a sábado'}</span>
       )}
     </p>
   )

@@ -7,7 +7,7 @@ import type { ReactNode } from 'react'
 export function Confirmar({ children, curto }: { children?: ReactNode; curto?: string }) {
   const completo = children ?? '[CONFIRMAR COM O CLIENTE]'
   return (
-    <span className="marca-confirmar" data-placeholder>
+    <span className={curto ? "marca-confirmar whitespace-nowrap" : "marca-confirmar inline-block max-w-full"} data-placeholder>
       {curto ? (
         <>
           <span aria-hidden="true">{curto}</span>

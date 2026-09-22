@@ -23,7 +23,22 @@ const { render, jsonLd } = await import(pathToFileURL(path.join(raiz, 'dist-ssr'
 
 let html = await readFile(path.join(dist, 'index.html'), 'utf8')
 const assets = await readdir(path.join(dist, 'assets'))
-const fonteTitulo = assets.find((a) => /^fraunces-latin-soft-normal.*\.woff2$/.test(a))
+// As duas fontes do título (normal + itálico) aparecem no H1, que é o elemento LCP
+const fontesTitulo = assets.filter((a) => /^fraunces-soft-(normal|italic).*\.woff2$/.test(a))
+
+// CSS inline (≈9 kB gzip): elimina a requisição que bloqueia a renderização
+const cssLink = html.match(/<link rel="stylesheet"[^>]*href="\/assets\/([^"]+\.css)"[^>]*>/)
+if (cssLink) {
+  const css = await readFile(path.join(dist, 'assets', cssLink[1]), 'utf8')
+  html = html.replace(cssLink[0], () => `<style>${css}</style>`)
+}
+
+// Preload da foto do hero (elemento LCP), com o mesmo srcset/sizes do <img>
+const hero = { slot: 'hero-cachorro-pos-banho', larguras: [480, 760, 1120] }
+const heroSizes = '(min-width: 1024px) 34rem, (min-width: 640px) 26rem, 92vw'
+const preloadHero = `<link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="${hero.larguras
+  .map((w) => `/images/${hero.slot}-${w}.webp ${w}w`)
+  .join(', ')}" imagesizes="${heroSizes}" />`
 
 html = html
   .replace('<!--app-html-->', render())
@@ -35,7 +50,8 @@ html = html
   )
   .replace(
     '<!--preload-->',
-    fonteTitulo ? `<link rel="preload" href="/assets/${fonteTitulo}" as="font" type="font/woff2" crossorigin />` : '',
+    fontesTitulo.map((f) => `<link rel="preload" href="/assets/${f}" as="font" type="font/woff2" crossorigin />`).join('') +
+      preloadHero,
   )
   .replace('<!--jsonld-->', `<script type="application/ld+json">${jsonLd(siteUrl)}</script>`)
 

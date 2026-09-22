@@ -13,7 +13,7 @@ import { mensagens, urlWhatsApp } from '@/lib/whatsapp'
 export function Condominios() {
   return (
     <section id="condominios" aria-labelledby="condominios-titulo" className="bg-tinta py-16 text-creme md:py-24">
-      <div className="container-site grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+      <div className="container-site grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 [&>*]:min-w-0">
         <div>
           <p className="inline-flex items-center gap-2 rounded-full bg-mostarda px-3.5 py-1.5 text-sm font-bold text-tinta">
             <Building2 aria-hidden="true" className="size-4" strokeWidth={2} />

@@ -27,7 +27,7 @@ export function Rodape() {
         </div>
 
         <div>
-          <h2 className="font-display text-xl font-semibold text-mostarda">Contato</h2>
+          <h2 className="font-display text-xl font-semibold text-mostarda-claro">Contato</h2>
           <dl className="mt-3 space-y-3">
             <div>
               <dt className="text-sm font-bold uppercase tracking-wider text-creme/90">Endereço</dt>
@@ -54,7 +54,7 @@ export function Rodape() {
         </div>
 
         <div>
-          <h2 className="font-display text-xl font-semibold text-mostarda">Navegue</h2>
+          <h2 className="font-display text-xl font-semibold text-mostarda-claro">Navegue</h2>
           <ul className="mt-2">
             {links.map((l) => (
               <li key={l.href}>
