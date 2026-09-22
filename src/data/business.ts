@@ -5,6 +5,8 @@
  * Campos com `null` ou marcados CONFIRMAR são desconhecidos e estão listados em PLACEHOLDERS.md.
  */
 
+import { googleMaps } from './google-maps'
+
 export const CONFIRMAR = '[CONFIRMAR COM O CLIENTE]'
 
 export type DiaSemana = 0 | 1 | 2 | 3 | 4 | 5 | 6 // 0 = domingo
@@ -26,8 +28,8 @@ export const business = {
     completo: 'R. Olívia Guedes Penteado, 517 - Socorro, São Paulo - SP, 04766-001',
     curto: 'R. Olívia Guedes Penteado, 517 · Socorro',
   },
-  /** Coordenadas exatas: [CONFIRMAR COM O CLIENTE] (pegar no Google Maps da loja). Enquanto null, o JSON-LD omite `geo`. */
-  geo: null as { lat: number; lng: number } | null,
+  /** Coordenadas: preencher em src/data/google-maps.ts. Enquanto null, o JSON-LD omite `geo`. */
+  geo: googleMaps.coordenadas,
   telefone: {
     exibicao: '(11) 97696-4074',
     e164: '+5511976964074',
@@ -53,13 +55,11 @@ export const business = {
   google: {
     nota: 4.8,
     avaliacoes: 150,
-    /**
-     * Link de busca que mostra o painel da loja com as avaliações.
-     * [CONFIRMAR COM O CLIENTE] trocar pelo link direto de avaliações (Place ID) do Perfil da Empresa.
-     */
+    /** Link direto: preencher em src/data/google-maps.ts. Até lá, busca que mostra a ficha da loja. */
     urlAvaliacoes:
+      googleMaps.linkAvaliacoes ||
       'https://www.google.com/search?q=' +
-      encodeURIComponent('Pet Sobral R. Olívia Guedes Penteado 517 Socorro São Paulo avaliações'),
+        encodeURIComponent('Pet Sobral R. Olívia Guedes Penteado 517 Socorro São Paulo avaliações'),
   },
   elogios: [
     'atendimento atencioso',
