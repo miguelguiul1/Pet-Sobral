@@ -115,3 +115,18 @@ Em `.claude/agents/` (catálogo Agency Agents, MIT). Papel de cada um:
 | Reality Checker | revisão brutal final (padrão "NEEDS WORK") |
 | UI Finish-Gate Reviewer | polimento final, caça ao "cara de template" |
 | Proposal Strategist | kit de venda para o dono |
+
+## Preview (Vercel) e indexação
+
+- Projeto Vercel: `pet-sobral-preview`. Deploy estático via integração GitHub (importar o repositório no painel da Vercel).
+- **Enquanto o dono não aprovar, o site não pode ser indexado.** Dupla proteção:
+  1. `<meta name="robots" content="noindex, nofollow">` injetado no build quando `VITE_SITE_INDEXAVEL !== "true"` (padrão: bloqueado);
+  2. header `X-Robots-Tag: noindex, nofollow` em `vercel.json`, e `robots.txt` com `Disallow: /` na versão de preview.
+- Liberar indexação (após aprovação) = setar `VITE_SITE_INDEXAVEL=true`, remover o header do `vercel.json`, trocar o `robots.txt` e configurar o domínio definitivo no canonical/sitemap.
+
+## Kit de venda (Fase 5) — pasta `kit-venda/`
+
+- `mensagem-whatsapp.md` — abordagem curta com link do preview
+- `roteiro-apresentacao.md` — 2–3 min presencial, focado no ganho do dono (agendamento pelo WhatsApp, aparecer no Google para "banho e tosa Socorro", mais confiança)
+- `proposta-comercial.pdf` (+ fonte HTML) — 1 página, valores como `[DEFINIR PREÇO]`
+- `checklist-dono.md` — o que coletar para a versão final (fotos reais, preços, logo, Instagram se houver, etc.)
