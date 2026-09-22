@@ -2,8 +2,16 @@ import type { ReactNode } from 'react'
 import { Confirmar } from '@/components/Confirmar'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { business } from '@/data/business'
+import { useModoRevisao } from '@/hooks/useModoRevisao'
 
-const perguntas: Array<{ p: string; r: ReactNode }> = [
+interface Pergunta {
+  p: string
+  r: ReactNode
+  /** Sem resposta neutra possível: só aparece no modo revisão (?revisao=1). */
+  soRevisao?: boolean
+}
+
+const perguntas: Pergunta[] = [
   {
     p: 'Preciso agendar?',
     r: (
@@ -22,16 +30,23 @@ const perguntas: Array<{ p: string; r: ReactNode }> = [
       </>
     ),
   },
-  { p: 'Vocês atendem gatos?', r: <Confirmar>[CONFIRMAR COM O CLIENTE: atende gatos? Se sim, em quais serviços?]</Confirmar> },
-  { p: 'Quais as formas de pagamento?', r: <Confirmar>[CONFIRMAR COM O CLIENTE: formas de pagamento aceitas.]</Confirmar> },
+  {
+    p: 'Vocês atendem gatos?',
+    r: <Confirmar>[CONFIRMAR COM O CLIENTE: atende gatos? Se sim, em quais serviços?]</Confirmar>,
+    soRevisao: true,
+  },
+  {
+    p: 'Quais as formas de pagamento?',
+    r: <Confirmar>[CONFIRMAR COM O CLIENTE: formas de pagamento aceitas.]</Confirmar>,
+    soRevisao: true,
+  },
   {
     p: 'Quanto custa?',
     r: (
-      <>
-        Banho, tosa e banho + tosa começam a partir de R$ <Confirmar curto="a confirmar">[CONFIRMAR COM O CLIENTE]</Confirmar>. O
-        valor certinho pro seu pet a gente passa pelo WhatsApp.{' '}
-        <Confirmar>[CONFIRMAR COM O CLIENTE: o preço varia por porte/pelagem?]</Confirmar>
-      </>
+      <Confirmar neutro="O valor depende do serviço escolhido. Pergunte pelo WhatsApp e a gente passa o valor para o seu pet.">
+        Banho, tosa e banho + tosa começam a partir de R$ [CONFIRMAR COM O CLIENTE]. O valor certinho pro seu pet a gente passa
+        pelo WhatsApp. [CONFIRMAR COM O CLIENTE: o preço varia por porte/pelagem?]
+      </Confirmar>
     ),
   },
   {
@@ -50,6 +65,7 @@ const perguntas: Array<{ p: string; r: ReactNode }> = [
 ]
 
 export function Duvidas() {
+  const revisao = useModoRevisao()
   return (
     <section id="duvidas" aria-labelledby="duvidas-titulo" className="py-16 md:py-24">
       <div className="container-site grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
@@ -57,15 +73,15 @@ export function Duvidas() {
           Perguntas frequentes
         </h2>
         <Accordion type="single" collapsible className="border-t border-border">
-          {perguntas.map(({ p, r }, i) => (
-            <AccordionItem key={p} value={`p${i}`}>
-              <AccordionTrigger>{p}</AccordionTrigger>
-              {/* forceMount: respostas ficam no HTML (SEO) mesmo fechadas; o Radix aplica `hidden` */}
-              <AccordionContent forceMount>
-                {r}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
+          {perguntas
+            .filter((q) => revisao || !q.soRevisao)
+            .map(({ p, r }) => (
+              <AccordionItem key={p} value={p}>
+                <AccordionTrigger>{p}</AccordionTrigger>
+                {/* forceMount: respostas ficam no HTML (SEO) mesmo fechadas; ficam ocultas via data-state */}
+                <AccordionContent forceMount>{r}</AccordionContent>
+              </AccordionItem>
+            ))}
         </Accordion>
       </div>
     </section>

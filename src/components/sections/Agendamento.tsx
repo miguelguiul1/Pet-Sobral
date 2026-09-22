@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Input, Label, Textarea } from '@/components/ui/input'
 import { business } from '@/data/business'
 import { useAgora } from '@/hooks/useAgora'
+import { useModoRevisao } from '@/hooks/useModoRevisao'
 import { dataNaLoja, formatarHora, MEIO_DIA, proximosDiasAbertos } from '@/lib/opening-hours'
 import { cn } from '@/lib/utils'
 import {
@@ -129,6 +130,7 @@ function Chips({
 
 export function Agendamento() {
   const agora = useAgora()
+  const revisao = useModoRevisao()
   const [dados, setDados] = useState<Estado>(inicial)
   const [erros, setErros] = useState<Partial<Record<Campo, string>>>({})
   const [enviado, setEnviado] = useState<string | null>(null)
@@ -268,7 +270,8 @@ export function Agendamento() {
                 valor={dados.especie}
                 onChange={(v) => set('especie', v as Especie)}
                 erro={erros.especie}
-                dica={<Confirmar curto="Gatos: a confirmar">[CONFIRMAR COM O CLIENTE: atende gatos?]</Confirmar>}
+                // Modo padrão: sem dica (não há texto neutro que não prometa nada sobre gatos)
+                dica={revisao ? <Confirmar curto="Gatos: a confirmar">[CONFIRMAR COM O CLIENTE: atende gatos?]</Confirmar> : undefined}
                 opcoes={[
                   { valor: 'Cachorro', rotulo: 'Cachorro' },
                   { valor: 'Gato', rotulo: 'Gato' },

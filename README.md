@@ -48,6 +48,15 @@ git commit -m "feat: fotos ilustrativas do Unsplash com créditos"
 git push origin claude/pet-sobral-prototype-p2kz1m
 ```
 
+## Modo revisão
+
+- `http://localhost:5173/` (ou o link da Vercel): site limpo, sem nenhuma marca `[CONFIRMAR]`.
+- `.../?revisao=1`: mostra todos os itens pendentes destacados, para passar com o dono. Lista completa em `PLACEHOLDERS.md`.
+
+## Dados do Google Maps
+
+O link direto das avaliações e as coordenadas da loja ficam em `src/data/google-maps.ts` (lugar único).
+
 ## Comandos do dia a dia
 
 | Comando | O que faz |

@@ -27,6 +27,8 @@ Esses dados vivem em **um único arquivo** (`src/data/business.ts`). Componentes
 7. O selo diz **"Preço justo no banho e tosa"**, sempre atribuído aos clientes. Nunca "mais barato", "menor preço" ou comparação com concorrentes; a frase "nenhum concorrente da região faz isso" não entra no site nem no kit de venda.
 8. Condomínios e Mercado Livre: só o que está no briefing ("atende condomínios da região", "ponto de devolução do Mercado Livre"). Como funciona, raio, frequência, descontos etc. = `[CONFIRMAR COM O CLIENTE]`.
 9. Feriados não são tratados no "Aberto agora" até o cliente confirmar (item do checklist da Fase 5).
+10. **Modo padrão sem marcas.** Todo dado pendente usa `<Confirmar neutro="…">` (texto neutro e verdadeiro) ou `<SoNaRevisao>` (oculto). As marcas só aparecem com `?revisao=1`. Todo novo placeholder entra no PLACEHOLDERS.md com o texto do modo padrão, e `tests/placeholders.spec.ts` precisa continuar passando.
+11. Link das avaliações e coordenadas: só em `src/data/google-maps.ts`.
 
 ## Stack
 
@@ -35,7 +37,9 @@ Esses dados vivem em **um único arquivo** (`src/data/business.ts`). Componentes
 - shadcn/ui (só os componentes usados: button, input, select, radio-group, accordion, label…)
 - Sem backend. Formulário gera link `https://wa.me/5511976964074?text=…`
 - Pré-renderização estática do HTML no build (SEO local e LCP): a página precisa ter o conteúdo no HTML servido, não só após o JS rodar.
-- Testes: Playwright (fluxo de agendamento, breakpoints, "aberto agora"), Lighthouse CI para as metas de nota.
+- Testes: Playwright (fluxo de agendamento, breakpoints, "aberto agora", placeholders), Lighthouse para as metas de nota.
+- **O build roda no Windows sem Python.** As fontes enxutas da Fraunces estão commitadas em `src/assets/fonts/` como arquivos prontos; fonttools só seria necessário para regenerá-las (comando no comentário de `src/index.css`).
+- Microinterações (Whimsy Injector só sugere): nada que atrase o botão de agendar ou derrube a Performance abaixo de 95.
 - Deploy: Vercel (projeto `pet-sobral-preview`, branch `main`).
 
 ## Estrutura

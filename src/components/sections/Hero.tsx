@@ -38,7 +38,7 @@ export function Hero() {
               </a>
             </Button>
             <Button asChild variant="link" size="link" className="self-center sm:self-auto">
-              <a href="#servicos">Ver serviços e preços</a>
+              <a href="#servicos">Ver serviços</a>
             </Button>
           </div>
 

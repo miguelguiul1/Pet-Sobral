@@ -1,4 +1,4 @@
-import { Confirmar } from '@/components/Confirmar'
+import { Confirmar, SoNaRevisao } from '@/components/Confirmar'
 import { Logo } from '@/components/Logo'
 import { business } from '@/data/business'
 import { mensagens, urlWhatsApp } from '@/lib/whatsapp'
@@ -64,9 +64,11 @@ export function Rodape() {
               </li>
             ))}
           </ul>
-          <p className="mt-4 text-sm">
-            Redes sociais: <Confirmar>[CONFIRMAR COM O CLIENTE: tem Instagram?]</Confirmar>
-          </p>
+          <SoNaRevisao>
+            <p className="mt-4 text-sm">
+              Redes sociais: <Confirmar>[CONFIRMAR COM O CLIENTE: tem Instagram?]</Confirmar>
+            </p>
+          </SoNaRevisao>
         </div>
       </div>
 

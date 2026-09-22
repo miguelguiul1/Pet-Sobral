@@ -1,3 +1,4 @@
+import { AvisoRevisao } from '@/components/Confirmar'
 import { WhatsAppFab } from '@/components/WhatsAppFab'
 import { Agendamento } from '@/components/sections/Agendamento'
 import { Cabecalho } from '@/components/sections/Cabecalho'
@@ -19,6 +20,7 @@ export function App() {
       >
         Pular para o conteúdo
       </a>
+      <AvisoRevisao />
       <Cabecalho />
       <main id="conteudo" tabIndex={-1} className="outline-none">
         <Hero />

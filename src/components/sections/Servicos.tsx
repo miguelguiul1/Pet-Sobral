@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react'
-import { Confirmar } from '@/components/Confirmar'
+import { Confirmar, SoNaRevisao } from '@/components/Confirmar'
 import { Foto } from '@/components/Foto'
 import { IconeWhatsApp } from '@/components/IconeWhatsApp'
 import { SeloPrecoJusto } from '@/components/SeloPrecoJusto'
@@ -61,7 +61,11 @@ export function Servicos() {
               Banho e tosa no Socorro, e o que mais seu pet precisar
             </h2>
             <p className="mt-4 text-lg text-creme/95">
-              Tudo num lugar só, pertinho de casa. Os preços abaixo são o ponto de partida; o valor certinho a gente passa pelo WhatsApp.
+              Tudo num lugar só, pertinho de casa.{' '}
+              <Confirmar neutro="O valor para o seu pet a gente passa pelo WhatsApp.">
+                [CONFIRMAR COM O CLIENTE: texto com preços] Os preços abaixo são o ponto de partida; o valor certinho a gente passa
+                pelo WhatsApp.
+              </Confirmar>
             </p>
           </div>
           <SeloPrecoJusto claro />
@@ -84,10 +88,12 @@ export function Servicos() {
                 {c.servico ? (
                   <>
                     <p className="mt-4 text-sm">
-                      a partir de{' '}
-                      <strong className="text-lg text-terracota-escuro">
-                        R$ <Confirmar curto="a confirmar">[CONFIRMAR COM O CLIENTE] preço do {c.titulo.toLowerCase()}</Confirmar>
-                      </strong>
+                      <Confirmar neutro={<span className="font-semibold text-tinta-suave">Valor pelo WhatsApp</span>}>
+                        a partir de{' '}
+                        <strong className="text-lg text-terracota-escuro">
+                          R$ <span className="marca-confirmar whitespace-nowrap">[CONFIRMAR] preço do {c.titulo.toLowerCase()}</span>
+                        </strong>
+                      </Confirmar>
                     </p>
                     <a
                       href="#agendamento"
@@ -115,10 +121,12 @@ export function Servicos() {
           ))}
         </ul>
 
-        <p className="mt-6 text-sm text-creme/95">
-          O valor pode variar conforme o porte e a pelagem do pet.{' '}
-          <Confirmar>[CONFIRMAR COM O CLIENTE: o preço varia por porte/pelagem? quais faixas?]</Confirmar>
-        </p>
+        <SoNaRevisao>
+          <p className="mt-6 text-sm text-creme/95">
+            O valor pode variar conforme o porte e a pelagem do pet.{' '}
+            <Confirmar>[CONFIRMAR COM O CLIENTE: o preço varia por porte/pelagem? quais faixas?]</Confirmar>
+          </p>
+        </SoNaRevisao>
       </div>
     </section>
   )

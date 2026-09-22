@@ -28,7 +28,7 @@ export function Condominios() {
           </p>
           <div className="mt-6 rounded-xl border border-creme/25 p-4 text-sm">
             <p className="mb-2 font-bold text-mostarda">Como funciona</p>
-            <Confirmar>
+            <Confirmar neutro="Para saber como funciona o atendimento no seu condomínio, fale com a gente pelo WhatsApp.">
               [CONFIRMAR COM O CLIENTE: como funciona o atendimento a condomínios, quais condomínios/bairros entram, frequência, se há
               busca e leva, se há condição especial]
             </Confirmar>

@@ -1,41 +1,55 @@
 # Placeholders: o que confirmar com o Pet Sobral
 
-Tudo aqui aparece no site marcado como `[CONFIRMAR COM O CLIENTE]` (ou `[SUBSTITUIR]`), com fundo listrado amarelo.
-Nada disso foi inventado: são lacunas que só o dono pode preencher.
-Para achar no código: pesquise por `CONFIRMAR` ou `SUBSTITUIR`.
+O site tem **dois modos**:
 
-## Dados do negócio
+- **Padrão** (`/`): nenhuma marca `[CONFIRMAR]` aparece. Onde falta dado, entra um texto neutro e verdadeiro ou o trecho fica oculto.
+  Um teste E2E (`tests/placeholders.spec.ts`) garante isso no HTML servido e na página renderizada.
+- **Revisão** (`/?revisao=1`): todas as marcas aparecem com fundo listrado amarelo e uma faixa no topo avisa o modo.
+  Use na conversa com o dono para passar item por item.
 
-| # | O que confirmar | Onde aparece | Arquivo |
-|---|---|---|---|
-| 1 | Preço "a partir de" do **banho** | Serviços, FAQ "Quanto custa?" | `sections/Servicos.tsx`, `sections/Duvidas.tsx` |
-| 2 | Preço "a partir de" da **tosa** | Serviços, FAQ | idem |
-| 3 | Preço "a partir de" do **banho + tosa** | Serviços, FAQ | idem |
-| 4 | O preço varia por porte/pelagem? Quais faixas? | Nota abaixo dos serviços, FAQ | idem |
-| 5 | Atende **gatos**? Em quais serviços? | Agendamento (opção Gato), FAQ | `sections/Agendamento.tsx`, `sections/Duvidas.tsx` |
-| 6 | Critério de **porte** (P/M/G, ex.: faixas de peso) | Agendamento | `sections/Agendamento.tsx` |
-| 7 | Funcionamento em **feriados** (hoje o "Aberto agora" ignora feriados) | FAQ, status de horário | `sections/Duvidas.tsx`, `lib/opening-hours.ts` |
-| 8 | Atende **sem agendamento** / por ordem de chegada? | FAQ | `sections/Duvidas.tsx` |
-| 9 | **Tempo médio** de banho, tosa e banho + tosa | FAQ | `sections/Duvidas.tsx` |
-| 10 | **Formas de pagamento** | FAQ | `sections/Duvidas.tsx` |
-| 11 | **Condomínios**: como funciona, quais condomínios/bairros (raio), frequência, busca e leva, condição especial | Seção Condomínios | `sections/Condominios.tsx` |
-| 12 | **Instagram** / redes sociais (se não tiver, remover o bloco) | Rodapé | `sections/Rodape.tsx`, `data/business.ts` |
-| 13 | **CNPJ / razão social** (se quiser exibir) | Rodapé | `sections/Rodape.tsx` |
-| 14 | **Coordenadas** exatas da loja (lat/long do Google Maps). Sem elas, o JSON-LD sai sem `geo` | JSON-LD | `data/business.ts` (`geo`) |
-| 15 | **Link direto das avaliações** no Google (Perfil da Empresa / Place ID). Hoje é um link de busca | Hero, Depoimentos | `data/business.ts` (`google.urlAvaliacoes`) |
-| 16 | **Domínio** definitivo (ex.: petsobral.com.br) | canonical, og:url, sitemap | `.env` (`VITE_SITE_URL`) |
+Para achar no código: pesquise por `CONFIRMAR`, `SUBSTITUIR`, `neutro=` ou `SoNaRevisao`.
+
+## Dados do negócio (com o dono)
+
+| # | O que confirmar | Onde | No modo padrão aparece | Arquivo |
+|---|---|---|---|---|
+| 1 | Preço "a partir de" do **banho** | Card Banho | "Valor pelo WhatsApp" | `sections/Servicos.tsx` |
+| 2 | Preço "a partir de" da **tosa** | Card Tosa | "Valor pelo WhatsApp" | idem |
+| 3 | Preço "a partir de" do **banho + tosa** | Card Banho + tosa | "Valor pelo WhatsApp" | idem |
+| 4 | Texto de introdução com preços | Intro de Serviços | "Tudo num lugar só, pertinho de casa. O valor para o seu pet a gente passa pelo WhatsApp." | idem |
+| 5 | O preço varia por porte/pelagem? Faixas? | Nota abaixo dos cards | **Oculto** | idem |
+| 6 | Preços (FAQ "Quanto custa?") | FAQ | "O valor depende do serviço escolhido. Pergunte pelo WhatsApp e a gente passa o valor para o seu pet." | `sections/Duvidas.tsx` |
+| 7 | Atende **gatos**? Em quais serviços? | Dica no formulário; FAQ | Dica **oculta**; pergunta do FAQ **oculta**. A opção "Gato" continua no formulário (campo espécie do briefing) | `sections/Agendamento.tsx`, `sections/Duvidas.tsx` |
+| 8 | Critério de **porte** (P/M/G) | Dica no formulário | "Na dúvida, escolha o mais próximo." | `sections/Agendamento.tsx` |
+| 9 | Funcionamento em **feriados** ("Aberto agora" ignora feriados) | FAQ | "Na dúvida, chama a gente no WhatsApp (11) 97696-4074 antes de vir." | `sections/Duvidas.tsx`, `lib/opening-hours.ts` |
+| 10 | Atende **sem agendamento**? | FAQ "Preciso agendar?" | "Recomendamos agendar pelo site ou pelo WhatsApp pra garantir seu horário." | `sections/Duvidas.tsx` |
+| 11 | **Tempo médio** de cada serviço | FAQ | "Se precisar de uma previsão pro seu pet, pergunte no WhatsApp ao agendar." | idem |
+| 12 | **Formas de pagamento** | FAQ | Pergunta **oculta** | idem |
+| 13 | **Condomínios**: como funciona, raio/bairros, frequência, busca e leva, condição especial | Seção Condomínios, bloco "Como funciona" | "Para saber como funciona o atendimento no seu condomínio, fale com a gente pelo WhatsApp." | `sections/Condominios.tsx` |
+| 14 | **Instagram** / redes sociais | Rodapé | **Oculto** | `sections/Rodape.tsx` |
+| 15 | **CNPJ / razão social** | Rodapé | **Oculto** (fica "© 2026 Pet Sobral.") | idem |
+| 16 | **Domínio** definitivo | canonical, og:url, sitemap | `pet-sobral-preview.vercel.app` | `.env` (`VITE_SITE_URL`) |
+| 17 | **Logo** oficial, se existir (o atual é tipográfico e provisório) | Cabeçalho, rodapé, favicon, OG | Logo provisório | `components/Logo.tsx`, `public/favicon.svg`, `scripts/og/og.html` |
+
+## Dados do Google Maps (coletados no Maps, não precisam do dono)
+
+Colar em **`src/data/google-maps.ts`** (lugar único):
+
+| # | O que | Enquanto vazio |
+|---|---|---|
+| 18 | `linkAvaliacoes`: link direto das avaliações | Link de busca no Google que mostra a ficha da loja |
+| 19 | `coordenadas`: `{ lat, lng }` da loja | JSON-LD sai sem `geo` |
 
 ## Conteúdo a coletar
 
-| # | O que | Onde | Arquivo |
+| # | O que | No modo padrão aparece | Arquivo |
 |---|---|---|---|
-| 17 | 3 **avaliações reais do Google** (temas: atendimento atencioso; equipe carinhosa; preço justo no banho e tosa) + nome do autor, **com autorização** | Depoimentos | `sections/Depoimentos.tsx` |
-| 18 | **Fotos reais** (substituem as ilustrativas do Unsplash). Lista em `public/images/README.md` | Todo o site | `public/images/`, `data/imagens.ts` |
-| 19 | Textos `alt` das fotos: revisar depois de rodar `npm run imagens` e de novo com as fotos reais | Todo o site | `data/imagens.ts` |
-| 20 | **Logo** oficial, se existir. O atual é tipográfico e **provisório** | Cabeçalho, rodapé, favicon, OG | `components/Logo.tsx`, `public/favicon.svg`, `scripts/og/og.html` |
+| 20 | 3 **avaliações reais do Google** + nome do autor, **com autorização** | Título "O que mais aparece nas avaliações" + 3 cards com os temas reais dos elogios (atendimento atencioso; equipe carinhosa com os animais; preço justo no banho e tosa), sem citação | `sections/Depoimentos.tsx` |
+| 21 | **Fotos reais** (substituem as ilustrativas) | Fotos ilustrativas do Unsplash | `public/images/`, `data/imagens.ts` |
+| 22 | Textos `alt`: revisar depois de `npm run imagens` e de novo com as fotos reais | — | `data/imagens.ts` |
 
 ## Antes de publicar de verdade (depois da aprovação)
 
-- Liberar indexação: `VITE_SITE_INDEXAVEL=true` no `.env` (ou nas variáveis da Vercel), remover o header `X-Robots-Tag` do `vercel.json` e fazer novo deploy (o `robots.txt` é gerado no build).
+- Liberar indexação: `VITE_SITE_INDEXAVEL=true` (no `.env` ou nas variáveis da Vercel), remover o header `X-Robots-Tag` do `vercel.json` e fazer novo deploy (o `robots.txt` é gerado no build).
 - Rodar `npm run og` para a imagem de compartilhamento usar a foto final.
 - Adicionar o site ao Perfil da Empresa no Google.
