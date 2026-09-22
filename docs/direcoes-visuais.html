@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pet Sobral — Direções visuais</title>
+<style>
+  @font-face{font-family:Fraunces;src:url(fonts/fraunces-latin-full-normal.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+  @font-face{font-family:Fraunces;src:url(fonts/fraunces-latin-full-italic.woff2) format("woff2");font-weight:100 900;font-style:italic;font-display:swap}
+  @font-face{font-family:Figtree;src:url(fonts/figtree-latin-wght-normal.woff2) format("woff2");font-weight:300 900;font-display:swap}
+  @font-face{font-family:"Bricolage Grotesque";src:url(fonts/bricolage-grotesque-latin-wdth-normal.woff2) format("woff2");font-weight:200 800;font-stretch:75% 100%;font-display:swap}
+  @font-face{font-family:"Atkinson Hyperlegible";src:url(fonts/atkinson-hyperlegible-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+  @font-face{font-family:"Atkinson Hyperlegible";src:url(fonts/atkinson-hyperlegible-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Figtree,system-ui,sans-serif;background:#e9e6e0;color:#1b1b1b;padding:40px 16px}
+  .board{max-width:1040px;margin:0 auto}
+  .board>header{margin-bottom:28px}
+  .board>header h1{font-size:28px;letter-spacing:-.01em}
+  .board>header p{color:#555;max-width:760px;margin-top:6px;line-height:1.5}
+  .cols{display:grid;grid-template-columns:1fr;gap:28px}
+  
+  .dir{border-radius:18px;padding:20px;display:grid;gap:24px;min-width:0}
+  .dir>*,.row>*{min-width:0}
+  @media(min-width:760px){.dir{padding:28px}}
+  .dir h2{font-size:30px;line-height:1.1}
+  .tagline{font-size:15px;line-height:1.5;max-width:560px}
+  .row{display:grid;grid-template-columns:1fr;gap:24px;align-items:start}
+  @media(min-width:760px){.row{grid-template-columns:390px minmax(0,1fr);gap:48px}}
+  .label{font:700 11px/1 Figtree,sans-serif;letter-spacing:.14em;text-transform:uppercase;opacity:.65;margin-bottom:10px}
+  .phone{width:100%;max-width:390px;border-radius:28px;overflow:hidden;box-shadow:0 20px 50px -20px rgba(0,0,0,.35);border:8px solid #111}
+  .sw{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .sw div{border-radius:10px;padding:44px 8px 8px;font:500 11px/1.3 Figtree,sans-serif}
+  .sw small{display:block;opacity:.8}
+  .notes{font-size:13px;line-height:1.55}
+  .notes li{margin-left:16px;margin-bottom:4px}
+  .ph-note{font:600 10px/1 Figtree,sans-serif;letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+
+  /* ====== DIREÇÃO A ====== */
+  .A{background:#F4EFE4;color:#1E2B25}
+  .A h2{font-family:Fraunces,serif;font-variation-settings:"SOFT" 100;font-weight:600}
+  .A .phone .scr{background:#F4EFE4;padding:18px 20px 26px;color:#1E2B25}
+  .logoA{white-space:nowrap;font-family:Fraunces,serif;font-variation-settings:"SOFT" 100,"WONK" 0;font-weight:600;letter-spacing:-.02em;line-height:1;display:inline-block;color:#1E2B25}
+  .logoA em{font-style:italic;font-weight:500;color:#9C4A2A}
+  .logoA .l{position:relative;display:inline-block}
+  .logoA .tag{position:absolute;left:50%;top:.76em;width:.34em;height:.46em;transform:translateX(-50%) rotate(-6deg);transform-origin:top center;overflow:visible}
+  .logoA .sub{display:block;font:700 .26em/1 Figtree,sans-serif;letter-spacing:.18em;margin-top:.8em;color:#1E2B25}
+  .A .topbar{display:flex;justify-content:space-between;align-items:center;font-size:22px}
+  .A .open{font:500 13px/1 Figtree;display:flex;align-items:center;gap:6px}
+  .A .dot{width:8px;height:8px;border-radius:50%;background:#0E6B45}
+  .A .arch{margin:22px 0 18px;height:190px;border-radius:190px 190px 20px 20px;background:linear-gradient(160deg,#d8c6a6,#b59570);display:grid;place-items:center;position:relative;border:1px solid rgba(30,43,37,.08)}
+  .A .seal{position:absolute;right:-6px;bottom:-14px;width:92px;height:92px;border-radius:50%;background:#D9A441;color:#1E2B25;display:grid;place-items:center;text-align:center;transform:rotate(-6deg);font:700 12px/1.15 Figtree}
+  .A .seal b{font:600 24px/1 Fraunces,serif;font-variation-settings:"SOFT" 100;display:block}
+  .A .seal::before{content:"";position:absolute;top:7px;left:50%;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:#F4EFE4}
+  .A h3{font:600 31px/1.08 Fraunces,serif;font-variation-settings:"SOFT" 100;letter-spacing:-.015em}
+  .A h3 em{font-style:italic;font-weight:500;color:#9C4A2A}
+  .A .lead{font-size:15.5px;line-height:1.5;margin:12px 0 18px;color:#33423a}
+  .A .price{display:inline-flex;gap:6px;align-items:center;background:#FBF8F1;border:1px solid rgba(30,43,37,.12);border-radius:999px;padding:6px 12px;font:600 12.5px/1 Figtree;margin-bottom:16px}
+  .A .price i{width:8px;height:8px;background:#D9A441;border-radius:50%}
+  .A .cta{display:flex;justify-content:center;align-items:center;gap:8px;background:#0E6B45;color:#fff;font:700 16px/1 Figtree;border-radius:14px;padding:17px;text-decoration:none}
+  .A .cta2{display:block;text-align:center;margin-top:12px;color:#9C4A2A;font:600 15px/1 Figtree;text-decoration:underline;text-underline-offset:4px}
+  .A .spec-h{font:600 40px/1 Fraunces,serif;font-variation-settings:"SOFT" 100}
+  .A .spec-b{font:400 16px/1.5 Figtree}
+  .A .icons{display:flex;gap:14px}
+  .A .icons svg{width:30px;height:30px;stroke:#1E2B25;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ====== DIREÇÃO B ====== */
+  .B{background:#FFFFFF;color:#17130F;border:1px solid #ddd}
+  .B h2{font-family:"Bricolage Grotesque",sans-serif;font-variation-settings:"wdth" 75;font-weight:800;text-transform:uppercase;letter-spacing:.005em}
+  .B .phone .scr{background:#fff;padding:18px 20px 26px;color:#17130F;font-family:"Atkinson Hyperlegible",sans-serif}
+  .logoB{white-space:nowrap;font-family:"Bricolage Grotesque",sans-serif;font-variation-settings:"wdth" 75;font-weight:800;text-transform:uppercase;line-height:.92;display:inline-flex;flex-direction:column;align-items:flex-start}
+  .logoB .p{background:#B8321F;color:#fff;padding:.08em .18em;border-radius:2px}
+  .logoB .s{position:relative;letter-spacing:.01em;margin-top:.04em;z-index:0}
+  .logoB .s::after{content:"";position:absolute;left:-.04em;right:-.06em;bottom:-.02em;height:.16em;background:#F5C542;transform:rotate(-1.5deg);z-index:-1}
+  .B .topbar{display:flex;justify-content:space-between;align-items:center;font-size:22px}
+  .B .open{font:700 13px/1 "Atkinson Hyperlegible";display:flex;align-items:center;gap:6px;background:#F2EDE3;padding:7px 10px;border-radius:4px}
+  .B .dot{width:8px;height:8px;border-radius:50%;background:#1a8a4a}
+  .B .sticker{margin:22px 6px 22px 0;height:180px;background:linear-gradient(160deg,#9bb8c9,#6f8ea3);border:3px solid #17130F;box-shadow:6px 6px 0 #17130F;display:grid;place-items:center;position:relative}
+  .B .bandana{position:absolute;left:-10px;top:-14px;background:#B8321F;color:#fff;font:800 13px/1.05 "Bricolage Grotesque";font-variation-settings:"wdth" 75;text-transform:uppercase;padding:10px 18px 22px;clip-path:polygon(0 0,100% 0,50% 100%);width:150px;text-align:center;border-radius:4px}
+  .B h3{font:800 38px/.98 "Bricolage Grotesque",sans-serif;font-variation-settings:"wdth" 75;text-transform:uppercase}
+  .B h3 mark{background:#F5C542;color:inherit;padding:0 .08em}
+  .B .lead{font-size:16px;line-height:1.5;margin:12px 0 16px}
+  .B .rating{display:flex;align-items:center;gap:8px;border:2px solid #17130F;padding:8px 10px;font:700 14px/1 "Atkinson Hyperlegible";margin-bottom:16px;width:max-content}
+  .B .rating b{font:800 22px/1 "Bricolage Grotesque";font-variation-settings:"wdth" 75}
+  .B .cta{display:flex;justify-content:center;align-items:center;gap:8px;background:#25D366;color:#17130F;font:700 17px/1 "Atkinson Hyperlegible";border:3px solid #17130F;box-shadow:4px 4px 0 #17130F;padding:16px;text-decoration:none}
+  .B .cta2{display:block;text-align:center;margin-top:14px;color:#B8321F;font:700 15px/1 "Atkinson Hyperlegible";text-decoration:underline;text-underline-offset:4px}
+  .B .spec-h{font:800 46px/1 "Bricolage Grotesque";font-variation-settings:"wdth" 75;text-transform:uppercase}
+  .B .spec-b{font:400 16px/1.5 "Atkinson Hyperlegible"}
+  .B .icons{display:flex;gap:10px}
+  .B .icons span{width:42px;height:42px;background:#F5C542;display:grid;place-items:center}
+  .B .icons svg{width:26px;height:26px;stroke:#17130F;stroke-width:2.5;fill:none;stroke-linecap:square;stroke-linejoin:miter}
+  .prov{display:inline-block;font:700 10px/1 Figtree;letter-spacing:.12em;text-transform:uppercase;border:1px dashed currentColor;padding:4px 6px;border-radius:4px;opacity:.7;margin-left:10px;vertical-align:middle}
+</style>
+</head>
+<body>
+<div class="board">
+  <header>
+    <h1>Pet Sobral: duas direções visuais</h1>
+    <p>Mockups do hero no celular (390px) com a copy de cada direção. As áreas de foto são blocos de cor, porque as fotos reais ou placeholder entram na implementação. Os logos são <strong>provisórios</strong>.</p>
+  </header>
+
+  <div class="cols">
+    <!-- ================= A ================= -->
+    <section class="dir A">
+      <div>
+        <div class="label">Direção A · recomendada pelo Brand Guardian</div>
+        <h2>Quintal da Guarapiranga</h2>
+        <p class="tagline">Pet shop de bairro com calor de casa: um quintal ensolarado do Socorro, não um catálogo de loja. Tons de terra e creme para passar cuidado, e uma serifa suave para o "preço justo" soar honesto.</p>
+      </div>
+      <div class="row">
+        <div>
+          <div class="label">Hero · 390px</div>
+          <div class="phone"><div class="scr">
+            <div class="topbar">
+              <span class="logoA" style="font-size:24px"><em>Pet</em> Sobra<span class="l">l<svg class="tag" viewBox="0 0 34 46"><line x1="17" y1="0" x2="17" y2="12" stroke="#1E2B25" stroke-width="4"/><circle cx="17" cy="29" r="16" fill="#D9A441"/><circle cx="17" cy="19" r="3.5" fill="#F4EFE4"/></svg></span></span>
+              <span class="open"><span class="dot"></span>Aberto · até 19h</span>
+            </div>
+            <div class="arch"><span class="ph-note">foto: pet após o banho</span>
+              <div class="seal"><div><b>4.8★</b>150 avaliações<br>no Google</div></div>
+            </div>
+            <h3>O banho e tosa de confiança <em>aqui do Socorro.</em></h3>
+            <p class="lead">Equipe carinhosa, atendimento atencioso e preço justo. Nota 4.8 no Google, com 150 avaliações.</p>
+            <div class="price"><i></i>Preço justo no banho e tosa, dizem os clientes</div>
+            <a class="cta" href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>Agendar banho e tosa</a>
+            <a class="cta2" href="#">Ver serviços e preços</a>
+          </div></div>
+        </div>
+        <div style="display:grid;gap:22px">
+          <div>
+            <div class="label">Logo provisório</div>
+            <span class="logoA" style="font-size:64px"><em>Pet</em> Sobra<span class="l">l<svg class="tag" viewBox="0 0 34 46"><line x1="17" y1="0" x2="17" y2="12" stroke="#1E2B25" stroke-width="4"/><circle cx="17" cy="29" r="16" fill="#D9A441"/><circle cx="17" cy="19" r="3.5" fill="#F4EFE4"/></svg></span><span class="sub">SOCORRO · SÃO PAULO</span></span><span class="prov">provisório</span>
+          </div>
+          <div>
+            <div class="label">Paleta · contraste WCAG</div>
+            <div class="sw">
+              <div style="background:#F4EFE4;border:1px solid #d9d2c3">#F4EFE4<small>fundo</small></div>
+              <div style="background:#1E2B25;color:#fff">#1E2B25<small>texto · 12.8:1</small></div>
+              <div style="background:#9C4A2A;color:#fff">#9C4A2A<small>primária · 5.3:1</small></div>
+              <div style="background:#D9A441">#D9A441<small>acento (selos)</small></div>
+              <div style="background:#0E6B45;color:#fff">#0E6B45<small>WhatsApp · 6.6:1</small></div>
+              <div style="background:#FBF8F1;border:1px solid #d9d2c3">#FBF8F1<small>cards</small></div>
+            </div>
+          </div>
+          <div>
+            <div class="label">Tipografia · Fraunces (Soft) + Figtree</div>
+            <div class="spec-h">Carinho de bairro</div>
+            <p class="spec-b">Banho, tosa, rações e acessórios na Olívia Guedes Penteado. Seg a sex 9h–19h, sáb 9h–16h30.</p>
+          </div>
+          <div>
+            <div class="label">Ícones · traço 1.75, pontas redondas</div>
+            <div class="icons">
+              <svg viewBox="0 0 24 24"><path d="M4 12h16v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-3Z"/><path d="M6 12V6a2 2 0 0 1 4 0"/><path d="M8 20l-1 2M16 20l1 2"/></svg>
+              <svg viewBox="0 0 24 24"><circle cx="6" cy="7" r="2.5"/><circle cx="6" cy="17" r="2.5"/><path d="M8 8.5 20 16M8 15.5 20 8"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 11-7 11Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 21s6-5.6 6-11a6 6 0 0 0-12 0c0 5.4 6 11 6 11Z"/><circle cx="12" cy="10" r="2"/></svg>
+              <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M10 21v-4h4v4"/></svg>
+            </div>
+          </div>
+          <ul class="notes">
+            <li><strong>Assinatura:</strong> a plaquinha de coleira, que aparece 3 vezes (logo, selo 4.8★, condomínios).</li>
+            <li><strong>Fotos:</strong> quentes, com o pet em close. Recorte em arco (janela de casa) nas fotos principais.</li>
+            <li><strong>Tom:</strong> próximo, calmo, de vizinho.</li>
+            <li><strong>Risco:</strong> creme com serifa é uma estética em alta. Se a execução for tímida, lembra "café artesanal".</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= B ================= -->
+    <section class="dir B">
+      <div>
+        <div class="label">Direção B</div>
+        <h2>Letreiro de Bairro</h2>
+        <p class="tagline" style="font-family:'Atkinson Hyperlegible'">A força gráfica das fachadas pintadas do comércio da zona sul: cor chapada, letra grande, informação direta. Comunica de cara "comércio de bairro, preço justo, aberto até 19h".</p>
+      </div>
+      <div class="row">
+        <div>
+          <div class="label">Hero · 390px</div>
+          <div class="phone"><div class="scr">
+            <div class="topbar">
+              <span class="logoB" style="font-size:22px"><span class="p">Pet</span><span class="s">Sobral</span></span>
+              <span class="open"><span class="dot"></span>Aberto · até 19h</span>
+            </div>
+            <div class="sticker"><span class="ph-note" style="color:#17130F">foto: pet após o banho</span>
+              <div class="bandana">Preço justo no banho e tosa</div>
+            </div>
+            <h3>Banho e tosa com <mark>carinho</mark> e preço justo, no Socorro.</h3>
+            <p class="lead">Seg a sex até 19h, sábado até 16h30. Atendemos condomínios da região.</p>
+            <div class="rating"><b>4.8</b>★★★★★ · 150 avaliações no Google</div>
+            <a class="cta" href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="#17130F" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>Agendar banho e tosa</a>
+            <a class="cta2" href="#">Ver serviços e preços</a>
+          </div></div>
+        </div>
+        <div style="display:grid;gap:22px">
+          <div>
+            <div class="label">Logo provisório</div>
+            <span class="logoB" style="font-size:64px"><span class="p">Pet</span><span class="s">Sobral</span></span><span class="prov">provisório</span>
+          </div>
+          <div>
+            <div class="label">Paleta · contraste WCAG</div>
+            <div class="sw">
+              <div style="background:#fff;border:1px solid #ddd">#FFFFFF<small>fundo</small></div>
+              <div style="background:#17130F;color:#fff">#17130F<small>texto · 18.5:1</small></div>
+              <div style="background:#B8321F;color:#fff">#B8321F<small>primária · 6.0:1</small></div>
+              <div style="background:#F5C542">#F5C542<small>amarelo · 11.4:1</small></div>
+              <div style="background:#25D366">#25D366<small>WhatsApp · 9.3:1*</small></div>
+              <div style="background:#F2EDE3">#F2EDE3<small>papel</small></div>
+            </div>
+            <p class="notes" style="margin-top:6px">* com texto escuro. Permite usar o verde oficial do WhatsApp.</p>
+          </div>
+          <div>
+            <div class="label">Tipografia · Bricolage Grotesque (condensada) + Atkinson Hyperlegible</div>
+            <div class="spec-h">Carinho de bairro</div>
+            <p class="spec-b">Banho, tosa, rações e acessórios na Olívia Guedes Penteado. Seg a sex 9h–19h, sáb 9h–16h30.</p>
+          </div>
+          <div>
+            <div class="label">Ícones · traço 2.5, cantos vivos, em blocos amarelos</div>
+            <div class="icons">
+              <span><svg viewBox="0 0 24 24"><path d="M4 12h16v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-3Z"/><path d="M6 12V6a2 2 0 0 1 4 0"/></svg></span>
+              <span><svg viewBox="0 0 24 24"><circle cx="6" cy="7" r="2.5"/><circle cx="6" cy="17" r="2.5"/><path d="M8 8.5 20 16M8 15.5 20 8"/></svg></span>
+              <span><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 11-7 11Z"/></svg></span>
+              <span><svg viewBox="0 0 24 24"><path d="M12 21s6-5.6 6-11a6 6 0 0 0-12 0c0 5.4 6 11 6 11Z"/><circle cx="12" cy="10" r="2"/></svg></span>
+              <span><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M10 21v-4h4v4"/></svg></span>
+            </div>
+          </div>
+          <ul class="notes" style="font-family:'Atkinson Hyperlegible'">
+            <li><strong>Assinatura:</strong> a bandana pós-banho (triângulo vermelho), no máximo uma vez por seção.</li>
+            <li><strong>Fotos:</strong> saturadas, recorte reto com borda preta e sombra dura, como adesivo colado.</li>
+            <li><strong>Tom:</strong> direto, bem-humorado, sem gíria forçada.</li>
+            <li><strong>Risco:</strong> se o vermelho for usado demais, puxa para "promoção de atacado". Também depende de fotos boas.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
