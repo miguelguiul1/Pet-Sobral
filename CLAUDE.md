@@ -24,6 +24,9 @@ Esses dados vivem em **um único arquivo** (`src/data/business.ts`). Componentes
 4. **Logo** é tipográfico e **provisório**, marcado assim no código e no PLACEHOLDERS.md.
 5. **Commits separados por etapa**, mensagens claras em português (`feat: seção de agendamento com envio via WhatsApp`).
 6. Toda afirmação de marketing precisa ter base nos dados reais (ex.: "preço justo" vem das avaliações; "4.8 no Google" é real). Nada de "o melhor de SP", "desde 19XX", "+ de 5 mil pets atendidos".
+7. O selo diz **"Preço justo no banho e tosa"**, sempre atribuído aos clientes. Nunca "mais barato", "menor preço" ou comparação com concorrentes; a frase "nenhum concorrente da região faz isso" não entra no site nem no kit de venda.
+8. Condomínios e Mercado Livre: só o que está no briefing ("atende condomínios da região", "ponto de devolução do Mercado Livre"). Como funciona, raio, frequência, descontos etc. = `[CONFIRMAR COM O CLIENTE]`.
+9. Feriados não são tratados no "Aberto agora" até o cliente confirmar (item do checklist da Fase 5).
 
 ## Stack
 
@@ -33,7 +36,7 @@ Esses dados vivem em **um único arquivo** (`src/data/business.ts`). Componentes
 - Sem backend. Formulário gera link `https://wa.me/5511976964074?text=…`
 - Pré-renderização estática do HTML no build (SEO local e LCP): a página precisa ter o conteúdo no HTML servido, não só após o JS rodar.
 - Testes: Playwright (fluxo de agendamento, breakpoints, "aberto agora"), Lighthouse CI para as metas de nota.
-- Deploy sugerido: Vercel / Netlify / Cloudflare Pages (estático).
+- Deploy: Vercel (projeto `pet-sobral-preview`, branch `main`).
 
 ## Estrutura
 
