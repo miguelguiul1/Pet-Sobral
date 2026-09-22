@@ -10,14 +10,14 @@ describe('statusLoja (fuso America/Sao_Paulo)', () => {
     ['2026-09-21T08:59', 'Fechado', 'abre hoje às 9h'],
     ['2026-09-21T09:00', 'Aberto agora', 'fecha às 19h'],
     ['2026-09-21T17:59', 'Aberto agora', 'fecha às 19h'],
-    ['2026-09-21T18:00', 'Fecha às 19h', 'aberto por pouco tempo'],
-    ['2026-09-21T18:59', 'Fecha às 19h', 'aberto por pouco tempo'],
+    ['2026-09-21T18:00', 'Fecha às 19h', 'ainda aberto'],
+    ['2026-09-21T18:59', 'Fecha às 19h', 'ainda aberto'],
     ['2026-09-21T19:00', 'Fechado', 'abre amanhã às 9h'],
     ['2026-09-25T19:30', 'Fechado', 'abre amanhã às 9h'], // sexta à noite -> sábado
     ['2026-09-26T09:00', 'Aberto agora', 'fecha às 16h30'],
     ['2026-09-26T15:29', 'Aberto agora', 'fecha às 16h30'],
-    ['2026-09-26T15:30', 'Fecha às 16h30', 'aberto por pouco tempo'],
-    ['2026-09-26T16:29', 'Fecha às 16h30', 'aberto por pouco tempo'],
+    ['2026-09-26T15:30', 'Fecha às 16h30', 'ainda aberto'],
+    ['2026-09-26T16:29', 'Fecha às 16h30', 'ainda aberto'],
     ['2026-09-26T16:30', 'Fechado', 'abre segunda às 9h'],
     ['2026-09-27T12:00', 'Fechado', 'abre amanhã às 9h'], // domingo
   ]

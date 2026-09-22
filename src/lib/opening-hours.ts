@@ -85,7 +85,7 @@ export function statusLoja(agora: Date, horario = business.horario): StatusLoja 
   if (exp && hoje.minutos >= exp.abre && hoje.minutos < exp.fecha) {
     const fecha = formatarHora(exp.fecha)
     if (exp.fecha - hoje.minutos <= AVISO_FECHAMENTO_MIN) {
-      return { estado: 'fechando', titulo: `Fecha às ${fecha}`, detalhe: 'aberto por pouco tempo' }
+      return { estado: 'fechando', titulo: `Fecha às ${fecha}`, detalhe: 'ainda aberto' }
     }
     return { estado: 'aberto', titulo: 'Aberto agora', detalhe: `fecha às ${fecha}` }
   }
