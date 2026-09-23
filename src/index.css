@@ -54,6 +54,16 @@
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     scroll-padding-top: 1rem;
+    /* Foco do teclado nunca fica embaixo do botão flutuante do WhatsApp (WCAG 2.4.11) */
+    scroll-padding-bottom: 6rem;
+  }
+  /* Menu do celular aberto: página atrás não rola e o botão flutuante some */
+  html[data-menu-aberto] {
+    overflow: hidden;
+  }
+  html[data-menu-aberto] [data-fab-whatsapp] {
+    visibility: hidden;
+    opacity: 0;
   }
   body {
     background: var(--color-creme);

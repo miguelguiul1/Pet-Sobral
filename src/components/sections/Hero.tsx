@@ -35,7 +35,7 @@ export function Hero() {
               Banho, tosa, rações e acessórios num pet shop de bairro, com uma equipe que trata seu pet com carinho.
             </p>
 
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div data-esconde-fab className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button asChild variant="branco" size="lg" className="w-full sm:w-auto">
                 <a href={urlWhatsApp(mensagens.agendarRapido)} target="_blank" rel="noopener" data-cta="hero-whatsapp">
                   <IconeWhatsApp className="size-6 text-zap motion-safe:group-hover/botao:animate-balanco" />

@@ -7,7 +7,7 @@ import { mensagens, urlWhatsApp } from '@/lib/whatsapp'
 
 export function Rodape() {
   return (
-    <footer className="bg-marca pt-14 pb-28 text-creme md:pb-14">
+    <footer data-esconde-fab className="bg-marca pt-14 pb-14 text-creme">
       <div className="container-site grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
           <Logo variante="branco" className="w-40" />

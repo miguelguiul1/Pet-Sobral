@@ -19,6 +19,12 @@ export function Cabecalho() {
   const botaoRef = useRef<HTMLButtonElement>(null)
   const painelRef = useRef<HTMLDivElement>(null)
 
+  // Menu aberto: trava a rolagem da página e esconde o botão flutuante (CSS em index.css)
+  useEffect(() => {
+    document.documentElement.toggleAttribute('data-menu-aberto', aberto)
+    return () => document.documentElement.removeAttribute('data-menu-aberto')
+  }, [aberto])
+
   // Fecha com Esc (devolvendo o foco ao botão) e ao tocar fora do menu
   useEffect(() => {
     if (!aberto) return
