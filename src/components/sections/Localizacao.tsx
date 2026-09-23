@@ -1,3 +1,4 @@
+import { secoes } from '@/data/navegacao'
 import { Rotulo } from '@/components/Rotulo'
 import { MapPin, Navigation, Package } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
@@ -61,10 +62,10 @@ export function Localizacao() {
   const agora = useAgora()
   const hoje = agora ? dataNaLoja(agora).diaSemana : null
   return (
-    <section id="localizacao" aria-labelledby="localizacao-titulo" className="bg-cartao py-16 md:py-24">
+    <section id={secoes.localizacao.id} aria-labelledby="localizacao-titulo" className="bg-cartao py-16 md:py-24">
       <div className="container-site grid gap-10 lg:grid-cols-2 lg:gap-14">
         <div>
-          <Rotulo>Onde estamos</Rotulo>
+          <Rotulo>{secoes.localizacao.rotulo}</Rotulo>
           <h2 id="localizacao-titulo" className="font-display text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.03em] md:text-5xl">
             Venha nos visitar <em className="not-italic text-marca">no Socorro</em>
           </h2>

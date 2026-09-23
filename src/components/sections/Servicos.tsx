@@ -1,3 +1,4 @@
+import { secoes } from '@/data/navegacao'
 import { Rotulo } from '@/components/Rotulo'
 import { ArrowRight } from 'lucide-react'
 import { Confirmar, SoNaRevisao } from '@/components/Confirmar'
@@ -54,11 +55,11 @@ function escolher(servico: Servico) {
 
 export function Servicos() {
   return (
-    <section id="servicos" aria-labelledby="servicos-titulo" className="bg-creme py-16 md:py-24">
+    <section id={secoes.servicos.id} aria-labelledby="servicos-titulo" className="bg-creme py-16 md:py-24">
       <div className="container-site">
         <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
           <div className="max-w-2xl">
-            <Rotulo>Serviços</Rotulo>
+            <Rotulo>{secoes.servicos.rotulo}</Rotulo>
             <h2 id="servicos-titulo" className="font-display text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.03em] text-balance md:text-5xl">
               Banho e tosa no Socorro, e o que mais seu pet precisar
             </h2>
@@ -98,7 +99,7 @@ export function Servicos() {
                       </Confirmar>
                     </p>
                     <a
-                      href="#agendamento"
+                      href={`#${secoes.agendamento.id}`}
                       onClick={() => escolher(c.servico!)}
                       className="group mt-3 inline-flex min-h-11 items-center gap-2 font-bold text-marca hover:text-marca-escuro"
                     >

@@ -1,3 +1,4 @@
+import { secoes } from '@/data/navegacao'
 import { Rotulo } from '@/components/Rotulo'
 import { Clock, HandHeart, MessagesSquare, Tag } from 'lucide-react'
 import { Foto } from '@/components/Foto'
@@ -30,7 +31,7 @@ const diferenciais = [
 
 export function PorQue() {
   return (
-    <section aria-labelledby="porque-titulo" className="bg-creme-escuro py-16 md:py-24">
+    <section id={secoes.porQue.id} aria-labelledby="porque-titulo" className="bg-creme-escuro py-16 md:py-24">
       <div className="container-site grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
           <div className="aspect-[4/5] overflow-hidden rounded-[2rem] bg-creme ring-[6px] ring-white shadow-[0_30px_60px_-34px_rgb(30_43_37/0.6)]">
@@ -44,7 +45,7 @@ export function PorQue() {
         </div>
 
         <div>
-          <Rotulo>Por que o Pet Sobral</Rotulo>
+          <Rotulo>{secoes.porQue.rotulo}</Rotulo>
           <h2 id="porque-titulo" className="font-display text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.03em] text-balance md:text-5xl">
             Por que os vizinhos confiam no <em className="not-italic text-marca">Pet Sobral</em>
           </h2>

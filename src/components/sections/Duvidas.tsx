@@ -1,3 +1,4 @@
+import { secoes } from '@/data/navegacao'
 import { Rotulo } from '@/components/Rotulo'
 import type { ReactNode } from 'react'
 import { Confirmar } from '@/components/Confirmar'
@@ -68,10 +69,10 @@ const perguntas: Pergunta[] = [
 export function Duvidas() {
   const revisao = useModoRevisao()
   return (
-    <section id="duvidas" aria-labelledby="duvidas-titulo" className="py-16 md:py-24">
+    <section id={secoes.duvidas.id} aria-labelledby="duvidas-titulo" className="py-16 md:py-24">
       <div className="container-site grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
         <div>
-          <Rotulo>Dúvidas</Rotulo>
+          <Rotulo>{secoes.duvidas.rotulo}</Rotulo>
           <h2 id="duvidas-titulo" className="font-display text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.03em] md:text-5xl">
           Perguntas frequentes
           </h2>

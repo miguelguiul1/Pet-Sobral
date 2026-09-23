@@ -1,15 +1,9 @@
 import { Confirmar, SoNaRevisao } from '@/components/Confirmar'
 import { Logo } from '@/components/Logo'
+import { ordemSecoes } from '@/data/navegacao'
 import { business } from '@/data/business'
 import { mensagens, urlWhatsApp } from '@/lib/whatsapp'
 
-const links = [
-  { href: '#servicos', rotulo: 'Serviços' },
-  { href: '#agendamento', rotulo: 'Agendar' },
-  { href: '#condominios', rotulo: 'Condomínios' },
-  { href: '#duvidas', rotulo: 'Perguntas frequentes' },
-  { href: '#localizacao', rotulo: 'Como chegar' },
-]
 
 export function Rodape() {
   return (
@@ -53,10 +47,10 @@ export function Rodape() {
         <div>
           <h2 className="font-display text-xl font-extrabold text-mostarda-claro">Navegue</h2>
           <ul className="mt-2">
-            {links.map((l) => (
-              <li key={l.href}>
-                <a href={l.href} className="inline-flex min-h-11 items-center hover:underline hover:underline-offset-4">
-                  {l.rotulo}
+            {ordemSecoes.map((l) => (
+              <li key={l.id}>
+                <a href={`#${l.id}`} className="inline-flex min-h-11 items-center hover:underline hover:underline-offset-4">
+                  {l.menu}
                 </a>
               </li>
             ))}

@@ -1,4 +1,5 @@
 import { Star } from 'lucide-react'
+import { secoes } from '@/data/navegacao'
 import { CachorroTraco } from '@/components/CachorroTraco'
 import { Foto } from '@/components/Foto'
 import { IconeWhatsApp } from '@/components/IconeWhatsApp'
@@ -43,7 +44,7 @@ export function Hero() {
                 </a>
               </Button>
               <Button asChild variant="linkClaro" size="link" className="self-center sm:self-auto">
-                <a href="#servicos">Ver serviços</a>
+                <a href={`#${secoes.servicos.id}`}>Ver serviços</a>
               </Button>
             </div>
 

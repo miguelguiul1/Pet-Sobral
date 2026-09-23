@@ -1,3 +1,4 @@
+import { secoes } from '@/data/navegacao'
 import { Building2 } from 'lucide-react'
 import { Confirmar } from '@/components/Confirmar'
 import { Foto } from '@/components/Foto'
@@ -12,12 +13,12 @@ import { mensagens, urlWhatsApp } from '@/lib/whatsapp'
  */
 export function Condominios() {
   return (
-    <section id="condominios" aria-labelledby="condominios-titulo" className="bg-marca-escuro py-16 text-white md:py-24">
+    <section id={secoes.condominios.id} aria-labelledby="condominios-titulo" className="bg-marca-escuro py-16 text-white md:py-24">
       <div className="container-site grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 [&>*]:min-w-0">
         <div>
           <p className="inline-flex items-center gap-2 rounded-full bg-mostarda px-3.5 py-1.5 text-sm font-bold text-tinta">
             <Building2 aria-hidden="true" className="size-4" strokeWidth={2} />
-            Para condomínios
+            {secoes.condominios.rotulo}
           </p>
           <h2 id="condominios-titulo" className="mt-5 font-display text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.03em] text-balance md:text-5xl">
             Mora em condomínio aqui na região? <em className="not-italic text-mostarda">A gente atende.</em>

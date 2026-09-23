@@ -1,3 +1,4 @@
+import { secoes } from '@/data/navegacao'
 import { Rotulo } from '@/components/Rotulo'
 import { CircleAlert } from 'lucide-react'
 import { useEffect, useId, useMemo, useRef, useState, type FormEvent, type ReactNode } from 'react'
@@ -201,10 +202,10 @@ export function Agendamento() {
   const idHintNome = useId()
 
   return (
-    <section id="agendamento" aria-labelledby="agendamento-titulo" data-esconde-fab className="py-16 md:py-24">
+    <section id={secoes.agendamento.id} aria-labelledby="agendamento-titulo" data-esconde-fab className="py-16 md:py-24">
       <div className="container-site grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
         <div className="lg:sticky lg:top-8 lg:self-start">
-          <Rotulo>Agendamento</Rotulo>
+          <Rotulo>{secoes.agendamento.rotulo}</Rotulo>
           <h2 id="agendamento-titulo" className="font-display text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.03em] md:text-5xl">
             Agende em <em className="not-italic text-marca">um minuto</em>
           </h2>

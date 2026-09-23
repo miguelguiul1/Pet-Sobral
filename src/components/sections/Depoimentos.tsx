@@ -1,3 +1,4 @@
+import { secoes } from '@/data/navegacao'
 import { Rotulo } from '@/components/Rotulo'
 import { ExternalLink, Quote } from 'lucide-react'
 import { Confirmar } from '@/components/Confirmar'
@@ -37,11 +38,11 @@ function CardTema({ tema }: { tema: string }) {
 export function Depoimentos() {
   const revisao = useModoRevisao()
   return (
-    <section aria-labelledby="depoimentos-titulo" className="py-16 md:py-24">
+    <section id={secoes.avaliacoes.id} aria-labelledby="depoimentos-titulo" className="py-16 md:py-24">
       <div className="container-site">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <Rotulo>Avaliações</Rotulo>
+            <Rotulo>{secoes.avaliacoes.rotulo}</Rotulo>
             <h2 id="depoimentos-titulo" className="font-display text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.03em] md:text-5xl">
               {revisao ? 'Quem já trouxe o pet, conta' : 'O que mais aparece nas avaliações'}
             </h2>
