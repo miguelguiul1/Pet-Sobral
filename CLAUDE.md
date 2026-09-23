@@ -136,4 +136,8 @@ Em `.claude/agents/` (catálogo Agency Agents, MIT). Papel de cada um:
 - `mensagem-whatsapp.md` — abordagem curta com link do preview
 - `roteiro-apresentacao.md` — 2–3 min presencial, focado no ganho do dono (agendamento pelo WhatsApp, aparecer no Google para "banho e tosa Socorro", mais confiança)
 - `proposta-comercial.pdf` (+ fonte HTML) — 1 página, valores como `[DEFINIR PREÇO]`
-- `checklist-dono.md` — o que coletar para a versão final (fotos reais, preços, logo, Instagram se houver, etc.)
+- `checklist-dono.md` — o que coletar para a versão final (fotos reais, preços, logo, Instagram se houver, etc.). Itens obrigatórios:
+  - **Autorização para citar avaliações reais do Google** no site, exibindo **só o primeiro nome** do autor
+  - **Se ele quer os preços publicados no site** (se não, os cards seguem com "Valor pelo WhatsApp")
+  - **Funcionamento em feriados** (o "Aberto agora" hoje ignora feriados)
+  - Todos os itens do `PLACEHOLDERS.md`

@@ -13,7 +13,7 @@ Para achar no código: pesquise por `CONFIRMAR`, `SUBSTITUIR`, `neutro=` ou `SoN
 
 | # | O que confirmar | Onde | No modo padrão aparece | Arquivo |
 |---|---|---|---|---|
-| 1 | Preço "a partir de" do **banho** | Card Banho | "Valor pelo WhatsApp" | `sections/Servicos.tsx` |
+| 1 | **Se o dono quer os preços publicados no site**; se sim, preço "a partir de" do **banho** | Card Banho | "Valor pelo WhatsApp" | `sections/Servicos.tsx` |
 | 2 | Preço "a partir de" da **tosa** | Card Tosa | "Valor pelo WhatsApp" | idem |
 | 3 | Preço "a partir de" do **banho + tosa** | Card Banho + tosa | "Valor pelo WhatsApp" | idem |
 | 4 | Texto de introdução com preços | Intro de Serviços | "Tudo num lugar só, pertinho de casa. O valor para o seu pet a gente passa pelo WhatsApp." | idem |
@@ -44,7 +44,7 @@ Colar em **`src/data/google-maps.ts`** (lugar único):
 
 | # | O que | No modo padrão aparece | Arquivo |
 |---|---|---|---|
-| 20 | 3 **avaliações reais do Google** + nome do autor, **com autorização** | Título "O que mais aparece nas avaliações" + 3 cards com os temas reais dos elogios (atendimento atencioso; equipe carinhosa com os animais; preço justo no banho e tosa), sem citação | `sections/Depoimentos.tsx` |
+| 20 | 3 **avaliações reais do Google**, com **autorização do dono** para citar e exibindo **só o primeiro nome** do autor | Título "O que mais aparece nas avaliações" + 3 cards com os temas reais dos elogios (atendimento atencioso; equipe carinhosa com os animais; preço justo no banho e tosa), sem citação | `sections/Depoimentos.tsx` |
 | 21 | **Fotos reais** (substituem as ilustrativas) | Fotos ilustrativas do Unsplash | `public/images/`, `data/imagens.ts` |
 | 22 | Textos `alt`: revisar depois de `npm run imagens` e de novo com as fotos reais | — | `data/imagens.ts` |
 
