@@ -13,8 +13,8 @@ const buttonVariants = cva(
         contorno: 'border-2 border-tinta/80 bg-transparent text-tinta hover:bg-tinta hover:text-creme',
         claro: 'bg-creme text-marca-escuro hover:bg-cartao',
         branco: 'bg-white text-marca hover:bg-creme shadow-[0_14px_30px_-14px_rgb(0_0_0/0.6)]',
-        linkClaro: 'text-white underline decoration-2 decoration-mostarda underline-offset-4 hover:decoration-white',
-        link: 'text-marca underline decoration-2 underline-offset-4 hover:text-marca-escuro hover:decoration-mostarda',
+        linkClaro: 'text-white underline decoration-2 decoration-destaque underline-offset-4 hover:decoration-white',
+        link: 'text-marca underline decoration-2 underline-offset-4 hover:text-marca-escuro hover:decoration-destaque',
       },
       size: {
         lg: 'min-h-14 rounded-botao px-6 text-[1.0625rem]',

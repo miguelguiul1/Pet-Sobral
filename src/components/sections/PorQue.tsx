@@ -39,7 +39,7 @@ export function PorQue() {
             <Foto imagem={imagens.carinho} sizes="(min-width: 1024px) 28rem, 90vw" />
           </div>
           <p className="absolute right-0 -bottom-4 max-w-[15rem] rounded-2xl bg-marca px-5 py-4 text-white shadow-lg ring-4 ring-white sm:-right-4">
-            <span className="block font-display text-3xl font-extrabold text-mostarda">{notaFormatada} no Google</span>
+            <span className="block font-display text-3xl font-extrabold text-destaque">{notaFormatada} no Google</span>
             <span className="text-sm">com {business.google.avaliacoes} avaliações de clientes da região</span>
           </p>
         </div>

@@ -216,7 +216,7 @@ export function Agendamento() {
             {['Escolha o serviço e conte sobre o pet', 'Diga o dia e o período que prefere', 'Envie pelo WhatsApp e aguarde a confirmação'].map(
               (t, i) => (
                 <li key={t} className="flex items-center gap-4">
-                  <span className="grid size-10 shrink-0 place-items-center rounded-full bg-mostarda font-display text-lg font-extrabold">
+                  <span className="grid size-10 shrink-0 place-items-center rounded-full bg-marca text-white font-display text-lg font-extrabold">
                     {i + 1}
                   </span>
                   <span className="font-semibold">{t}</span>

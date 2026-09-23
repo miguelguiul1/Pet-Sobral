@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 
 const cores = {
   aberto: 'bg-zap',
-  fechando: 'bg-mostarda',
+  fechando: 'bg-estrela',
   fechado: 'bg-tinta-suave',
 } as const
 

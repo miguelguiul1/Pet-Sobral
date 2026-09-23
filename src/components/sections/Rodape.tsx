@@ -12,13 +12,13 @@ export function Rodape() {
         <div>
           <Logo variante="branco" className="w-40" />
           <p className="mt-4 max-w-xs text-creme/95">Pet shop, banho e tosa no Socorro, zona sul de São Paulo.</p>
-          <p className="mt-5 inline-flex rounded-full bg-mostarda px-3.5 py-1.5 text-sm font-bold text-tinta">
+          <p className="mt-5 inline-flex rounded-full bg-white px-3.5 py-1.5 text-sm font-bold text-marca">
             Ponto de devolução do Mercado Livre
           </p>
         </div>
 
         <div>
-          <h2 className="font-display text-xl font-extrabold text-mostarda-claro">Contato</h2>
+          <h2 className="font-display text-xl font-extrabold text-destaque">Contato</h2>
           <dl className="mt-3 space-y-3">
             <div>
               <dt className="text-sm font-bold uppercase tracking-wider text-creme/90">Endereço</dt>
@@ -45,7 +45,7 @@ export function Rodape() {
         </div>
 
         <div>
-          <h2 className="font-display text-xl font-extrabold text-mostarda-claro">Navegue</h2>
+          <h2 className="font-display text-xl font-extrabold text-destaque">Navegue</h2>
           <ul className="mt-2">
             {ordemSecoes.map((l) => (
               <li key={l.id}>

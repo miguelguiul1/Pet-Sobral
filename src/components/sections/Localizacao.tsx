@@ -92,7 +92,7 @@ export function Localizacao() {
                     <tr key={l.rotulo} className={cn('border-t border-border first:border-t-0', ehHoje && 'font-bold text-marca-escuro')}>
                       <th scope="row" className="py-2.5 font-semibold">
                         {l.rotulo}
-                        {ehHoje && <span className="ml-2 rounded-full bg-mostarda px-2 py-0.5 text-xs text-tinta">hoje</span>}
+                        {ehHoje && <span className="ml-2 rounded-full bg-marca px-2 py-0.5 text-xs text-white">hoje</span>}
                       </th>
                       <td className="py-2.5 text-right font-display text-lg font-extrabold">{l.valor}</td>
                     </tr>
@@ -102,7 +102,7 @@ export function Localizacao() {
             </table>
           </div>
 
-          <p className="mt-5 flex items-start gap-3 rounded-xl bg-mostarda-claro px-4 py-3">
+          <p className="mt-5 flex items-start gap-3 rounded-xl bg-marca-claro px-4 py-3">
             <Package aria-hidden="true" className="mt-0.5 size-5 shrink-0" strokeWidth={1.75} />
             <span>
               <strong>Ponto de devolução do Mercado Livre.</strong> É só vir no horário da loja.

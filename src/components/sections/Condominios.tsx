@@ -16,19 +16,19 @@ export function Condominios() {
     <section id={secoes.condominios.id} aria-labelledby="condominios-titulo" className="bg-marca-escuro py-16 text-white md:py-24">
       <div className="container-site grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 [&>*]:min-w-0">
         <div>
-          <p className="inline-flex items-center gap-2 rounded-full bg-mostarda px-3.5 py-1.5 text-sm font-bold text-tinta">
+          <p className="inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 text-sm font-bold text-marca">
             <Building2 aria-hidden="true" className="size-4" strokeWidth={2} />
             {secoes.condominios.rotulo}
           </p>
           <h2 id="condominios-titulo" className="mt-5 font-display text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.03em] text-balance md:text-5xl">
-            Mora em condomínio aqui na região? <em className="not-italic text-mostarda">A gente atende.</em>
+            Mora em condomínio aqui na região? <em className="not-italic text-destaque">A gente atende.</em>
           </h2>
           <p className="mt-5 text-lg text-white/90">
             O Pet Sobral atende condomínios da região. Se você é síndico, trabalha na administradora ou é morador e quer levar essa
             facilidade pro seu prédio, chama a gente no WhatsApp pra conversar.
           </p>
           <div className="mt-6 rounded-xl border border-white/25 p-4 text-sm">
-            <p className="mb-2 font-bold text-mostarda">Como funciona</p>
+            <p className="mb-2 font-bold text-destaque">Como funciona</p>
             <Confirmar neutro="Para saber como funciona o atendimento no seu condomínio, fale com a gente pelo WhatsApp.">
               [CONFIRMAR COM O CLIENTE: como funciona o atendimento a condomínios, quais condomínios/bairros entram, frequência, se há
               busca e leva, se há condição especial]

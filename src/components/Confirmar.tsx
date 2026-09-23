@@ -35,7 +35,7 @@ export function AvisoRevisao() {
   const revisao = useModoRevisao()
   if (!revisao) return null
   return (
-    <div role="status" className="sticky top-0 z-[55] bg-mostarda px-4 py-2 text-center text-sm font-bold text-tinta">
+    <div role="status" className="sticky top-0 z-[55] bg-destaque px-4 py-2 text-center text-sm font-bold text-marca-escuro">
       Modo revisão: os trechos listrados dependem de confirmação com o Pet Sobral. Sem <code>?revisao=1</code>, o site mostra
       só textos confirmados.
     </div>

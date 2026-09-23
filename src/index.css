@@ -4,7 +4,7 @@
 
 /*
  * Identidade do Pet Sobral (a partir do logo real): azul #3f3f95 dominante com branco,
- * sans pesada nos títulos, o cachorro em traço como elemento gráfico; mostarda como acento
+ * sans pesada nos títulos, o cachorro em traço como elemento gráfico; azul-claro de destaque; amarelo só nas estrelas
  * e verde só no WhatsApp.
  * Contrastes (WCAG) verificados em scripts/contraste.mjs.
  */
@@ -18,8 +18,10 @@
   --color-marca: #3f3f95;
   --color-marca-escuro: #2c2c6e;
   --color-marca-claro: #e3e3f3;
-  --color-mostarda: #d9a441;
-  --color-mostarda-claro: #f3e2b8;
+  /* Destaque = azul-claro derivado da marca (5,55:1 sobre #3f3f95). Se o letreiro tiver outra cor, trocar só aqui. */
+  --color-destaque: #c9c9ee;
+  /* Amarelo SÓ para estrelas de avaliação e o aviso "fecha em breve" (convenção). Não usar como cor de marca. */
+  --color-estrela: #d9a441;
   --color-zap: #0e6b45;
   --color-zap-escuro: #0a5537;
 
@@ -85,7 +87,7 @@
     border-radius: 6px;
   }
   ::selection {
-    background: var(--color-mostarda-claro);
+    background: var(--color-marca-claro);
   }
   @media (prefers-reduced-motion: reduce) {
     html {

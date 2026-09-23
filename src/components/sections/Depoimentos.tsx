@@ -28,7 +28,7 @@ function CardPlaceholder({ tema }: { tema: string }) {
 function CardTema({ tema }: { tema: string }) {
   return (
     <div className="flex h-full flex-col rounded-cartao bg-white p-6 ring-1 ring-border">
-      <span aria-hidden="true" className="size-3 rounded-full bg-mostarda" />
+      <span aria-hidden="true" className="size-3 rounded-full bg-marca" />
       <p className="mt-4 text-sm font-bold uppercase tracking-[0.12em] text-marca">Elogio frequente</p>
       <p className="mt-1 font-display text-2xl leading-snug font-extrabold first-letter:uppercase">{tema}</p>
     </div>

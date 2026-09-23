@@ -19,14 +19,14 @@ export function Hero() {
       <div className="container-site relative pt-6 pb-20 md:pt-10 lg:pb-28">
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
           <div>
-            <p className="mb-3 text-[0.8rem] font-extrabold uppercase tracking-[0.14em] text-mostarda-claro sm:text-sm">
+            <p className="mb-3 text-[0.8rem] font-extrabold uppercase tracking-[0.14em] text-destaque sm:text-sm">
               Pet shop no Socorro · zona sul de SP
             </p>
             <h1
               id="hero-titulo"
               className="font-display text-[2.6rem] leading-[1.02] font-extrabold tracking-[-0.035em] text-balance sm:text-5xl lg:text-[4.4rem]"
             >
-              O banho e tosa de confiança <span className="text-mostarda">aqui do Socorro.</span>
+              O banho e tosa de confiança <span className="text-destaque">aqui do Socorro.</span>
             </h1>
 
             <SeloPrecoJusto className="mt-6" />
@@ -57,7 +57,7 @@ export function Hero() {
               >
                 <span className="font-display text-4xl font-extrabold leading-none">{notaFormatada}</span>
                 <span className="text-sm leading-tight">
-                  <span className="flex text-mostarda" aria-hidden="true">
+                  <span className="flex text-estrela" aria-hidden="true">
                     {Array.from({ length: 5 }, (_, i) => (
                       <Star key={i} className="size-4 fill-current" strokeWidth={0} />
                     ))}
@@ -72,7 +72,7 @@ export function Hero() {
                 <StatusLoja className="mb-1.5 rounded-full bg-white px-3 py-1 text-tinta" />
                 <p className="font-display text-[1.45rem] leading-tight font-extrabold md:text-[1.6rem]">
                   <span className="block whitespace-nowrap xl:inline">Seg a sex 9h–19h</span>
-                  <span className="hidden text-mostarda xl:inline" aria-hidden="true">
+                  <span className="hidden text-destaque xl:inline" aria-hidden="true">
                     {' '}
                     ·{' '}
                   </span>
@@ -92,7 +92,7 @@ export function Hero() {
               target="_blank"
               rel="noopener"
               aria-label={`Nota ${notaFormatada} no Google, ${business.google.avaliacoes} avaliações (abre em nova aba)`}
-              className="absolute -bottom-6 -left-3 grid size-28 -rotate-6 place-items-center rounded-full bg-mostarda text-center text-tinta shadow-[0_12px_28px_-14px_rgb(0_0_0/0.7)] ring-4 ring-white transition-transform hover:rotate-0 md:size-32"
+              className="absolute -bottom-6 -left-3 grid size-28 -rotate-6 place-items-center rounded-full bg-white text-center text-marca shadow-[0_12px_28px_-14px_rgb(0_0_0/0.7)] ring-4 ring-destaque transition-transform hover:rotate-0 md:size-32"
             >
               <span aria-hidden="true" className="leading-tight">
                 <span className="block font-display text-3xl font-extrabold md:text-[2.1rem]">{notaFormatada}★</span>
