@@ -141,4 +141,6 @@ Em `.claude/agents/` (catálogo Agency Agents, MIT). Papel de cada um:
   - **Autorização para citar avaliações reais do Google** no site, exibindo **só o primeiro nome** do autor
   - **Se ele quer os preços publicados no site** (se não, os cards seguem com "Valor pelo WhatsApp")
   - **Funcionamento em feriados** (o "Aberto agora" hoje ignora feriados)
+  - **Arquivo original do logo** (vetor ou alta resolução) e **autorização do dono para usar a marca** (logo, cachorro em traço, cores) no site
+  - **Cores reais da fachada/letreiro**: a mostarda do site não está no logo (veio da direção anterior); confirmar ou trocar
   - Todos os itens do `PLACEHOLDERS.md`

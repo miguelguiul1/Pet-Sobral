@@ -29,7 +29,8 @@ Para achar no código: pesquise por `CONFIRMAR`, `SUBSTITUIR`, `neutro=` ou `SoN
 | 14 | **Instagram** / redes sociais | Rodapé | **Oculto** | `sections/Rodape.tsx` |
 | 15 | **CNPJ / razão social** | Rodapé | **Oculto** (fica "© 2026 Pet Sobral.") | idem |
 | 16 | **Domínio** definitivo. O logo traz `www.petsobral.com.br`: confirmar se o domínio é do dono e se está ativo | canonical, og:url, sitemap | `pet-sobral-preview.vercel.app` (a URL do logo foi omitida no site) | `.env` (`VITE_SITE_URL`) |
-| 17 | **Arquivo original do logo** (PDF/SVG/AI/PNG grande). O site usa uma vetorização feita a partir do JPG 365×365 recebido; o dono precisa aprovar | Cabeçalho, rodapé, favicon, OG | Logo real vetorizado | `public/marca/`, `public/favicon.svg`, `components/Logo.tsx` |
+| 17 | **Arquivo original do logo** (vetor: PDF/SVG/AI/EPS, ou PNG em alta resolução). O site usa uma vetorização feita por nós a partir do JPG 365×365 recebido, e o "L" final vem cortado na borda do próprio JPG | Cabeçalho, rodapé, favicon, OG, rótulos das seções | Logo real vetorizado | `public/marca/`, `public/favicon.svg`, `src/assets/marca/`, `components/Logo.tsx` |
+| 18 | **Autorização do dono para usar a marca** (logo, cachorro em traço e cores) no site | Todo o site | Marca usada no protótipo de apresentação | — |
 
 ## Dados do Google Maps (coletados no Maps, não precisam do dono)
 
@@ -37,16 +38,16 @@ Colar em **`src/data/google-maps.ts`** (lugar único):
 
 | # | O que | Enquanto vazio |
 |---|---|---|
-| 18 | `linkAvaliacoes`: link direto das avaliações | Link de busca no Google que mostra a ficha da loja |
-| 19 | `coordenadas`: `{ lat, lng }` da loja | JSON-LD sai sem `geo` |
+| 19 | `linkAvaliacoes`: link direto das avaliações | Link de busca no Google que mostra a ficha da loja |
+| 20 | `coordenadas`: `{ lat, lng }` da loja | JSON-LD sai sem `geo` |
 
 ## Conteúdo a coletar
 
 | # | O que | No modo padrão aparece | Arquivo |
 |---|---|---|---|
-| 20 | 3 **avaliações reais do Google**, com **autorização do dono** para citar e exibindo **só o primeiro nome** do autor | Título "O que mais aparece nas avaliações" + 3 cards com os temas reais dos elogios (atendimento atencioso; equipe carinhosa com os animais; preço justo no banho e tosa), sem citação | `sections/Depoimentos.tsx` |
-| 21 | **Fotos reais** (substituem as ilustrativas) | Fotos ilustrativas do Unsplash | `public/images/`, `data/imagens.ts` |
-| 22 | Textos `alt`: revisar depois de `npm run imagens` e de novo com as fotos reais | — | `data/imagens.ts` |
+| 21 | 3 **avaliações reais do Google**, com **autorização do dono** para citar e exibindo **só o primeiro nome** do autor | Título "O que mais aparece nas avaliações" + 3 cards com os temas reais dos elogios (atendimento atencioso; equipe carinhosa com os animais; preço justo no banho e tosa), sem citação | `sections/Depoimentos.tsx` |
+| 22 | **Fotos reais** (substituem as ilustrativas) | Fotos ilustrativas do Unsplash | `public/images/`, `data/imagens.ts` |
+| 23 | Textos `alt`: revisar depois de `npm run imagens` e de novo com as fotos reais | — | `data/imagens.ts` |
 
 ## Antes de publicar de verdade (depois da aprovação)
 
