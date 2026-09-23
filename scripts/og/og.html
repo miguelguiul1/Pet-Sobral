@@ -1,27 +1,26 @@
 <!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8">
 <style>
-@font-face{font-family:F;src:url(../../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-soft-normal.woff2);font-weight:100 900}
-@font-face{font-family:F;font-style:italic;src:url(../../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-soft-italic.woff2);font-weight:100 900}
+@font-face{font-family:F;src:url(../../src/assets/fonts/fraunces-soft-normal.woff2);font-weight:500 600}
+@font-face{font-family:F;font-style:italic;src:url(../../src/assets/fonts/fraunces-soft-italic.woff2);font-weight:500 600}
 @font-face{font-family:S;src:url(../../node_modules/@fontsource-variable/figtree/files/figtree-latin-wght-normal.woff2);font-weight:300 900}
 *{margin:0;box-sizing:border-box}
 body{width:1200px;height:630px;background:#f4efe4;color:#1e2b25;font-family:S;display:grid;grid-template-columns:1fr 440px;gap:40px;padding:56px 64px;overflow:hidden}
 .f{font-family:F;font-variation-settings:"SOFT" 100,"WONK" 0}
-.logo{font-size:40px;font-weight:600;letter-spacing:-.02em}
-.logo em{color:#9c4a2a;font-weight:500}
-h1{font-size:66px;line-height:1.02;font-weight:600;letter-spacing:-.02em;margin-top:38px}
-h1 em{color:#9c4a2a;font-weight:500}
+.logo{width:170px;height:auto;display:block}
+h1{font-size:64px;line-height:1.02;font-weight:600;letter-spacing:-.02em;margin-top:30px}
+h1 em{color:#3f3f95;font-weight:500}
 .selo{display:inline-flex;align-items:center;gap:12px;background:#d9a441;border-radius:14px;padding:12px 20px 12px 14px;margin-top:30px;font-weight:800;font-size:24px}
 .selo i{width:14px;height:14px;border-radius:50%;background:#f4efe4}
 .info{margin-top:26px;font-size:22px;font-weight:600}
 .arco{position:relative;height:518px}
 .arco div{position:absolute;inset:0;border-radius:999px 999px 24px 24px}
-.fundo{background:#9c4a2a;transform:translate(14px,14px)}
+.fundo{background:#3f3f95;transform:translate(14px,14px)}
 .foto{background:#d8c6a6 center/cover no-repeat}
 </style></head>
 <body>
 <div>
-  <div class="logo f"><em>Pet</em> Sobral</div>
+  <img class="logo" src="../../public/marca/logo-azul.svg" alt="">
   <h1 class="f">O banho e tosa de confiança <em>aqui do Socorro.</em></h1>
   <div class="selo"><i></i>Preço justo no banho e tosa</div>
   <p class="info">4,8 ★ no Google · 150 avaliações · Socorro, zona sul de SP</p>

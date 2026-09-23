@@ -44,7 +44,7 @@ export function PorQue() {
 
         <div>
           <h2 id="porque-titulo" className="font-display text-[2.1rem] leading-[1.08] font-semibold tracking-[-0.015em] text-balance md:text-5xl">
-            Por que os vizinhos confiam no <em className="font-medium text-terracota">Pet Sobral</em>
+            Por que os vizinhos confiam no <em className="font-medium text-marca">Pet Sobral</em>
           </h2>
           <p className="mt-4 text-lg text-tinta-suave">
             Não somos nós que dizemos. É o que mais aparece nas {business.google.avaliacoes} avaliações do Google, com nota {notaFormatada}.
@@ -52,7 +52,7 @@ export function PorQue() {
           <ul className="mt-10 grid gap-x-8 gap-y-8 sm:grid-cols-2">
             {diferenciais.map(({ icone: Icone, titulo, texto }) => (
               <li key={titulo}>
-                <span className="grid size-12 place-items-center rounded-full bg-terracota text-creme">
+                <span className="grid size-12 place-items-center rounded-full bg-marca text-creme">
                   <Icone aria-hidden="true" strokeWidth={1.75} className="size-6" />
                 </span>
                 <h3 className="mt-4 font-display text-xl font-semibold">{titulo}</h3>

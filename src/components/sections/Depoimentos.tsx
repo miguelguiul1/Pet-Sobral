@@ -10,7 +10,7 @@ const temas = ['atendimento atencioso', 'equipe carinhosa com os animais', 'pre�
 function CardPlaceholder({ tema }: { tema: string }) {
   return (
     <figure className="flex h-full flex-col rounded-cartao bg-cartao p-6 ring-1 ring-border">
-      <Quote aria-hidden="true" className="size-8 -scale-x-100 fill-terracota/15 text-terracota" strokeWidth={1.5} />
+      <Quote aria-hidden="true" className="size-8 -scale-x-100 fill-marca/15 text-marca" strokeWidth={1.5} />
       <blockquote className="mt-4 flex-1 font-display text-lg leading-snug">
         <Confirmar>[SUBSTITUIR por avaliação real do Google — tema: {tema}]</Confirmar>
       </blockquote>
@@ -27,7 +27,7 @@ function CardTema({ tema }: { tema: string }) {
   return (
     <div className="flex h-full flex-col rounded-cartao bg-cartao p-6 ring-1 ring-border">
       <span aria-hidden="true" className="size-3 rounded-full bg-mostarda" />
-      <p className="mt-4 text-sm font-bold uppercase tracking-[0.12em] text-terracota">Elogio frequente</p>
+      <p className="mt-4 text-sm font-bold uppercase tracking-[0.12em] text-marca">Elogio frequente</p>
       <p className="mt-1 font-display text-2xl leading-snug font-semibold first-letter:uppercase">{tema}</p>
     </div>
   )
@@ -51,7 +51,7 @@ export function Depoimentos() {
             href={business.google.urlAvaliacoes}
             target="_blank"
             rel="noopener"
-            className="inline-flex min-h-11 items-center gap-2 font-bold text-terracota underline decoration-2 underline-offset-4 hover:text-terracota-escuro"
+            className="inline-flex min-h-11 items-center gap-2 font-bold text-marca underline decoration-2 underline-offset-4 hover:text-marca-escuro"
           >
             Ver todas as avaliações no Google
             <ExternalLink aria-hidden="true" className="size-4" />

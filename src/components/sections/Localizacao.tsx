@@ -47,7 +47,7 @@ function Mapa() {
       ) : (
         <div className="absolute inset-0 grid place-items-center p-6 text-center text-tinta-suave">
           <p>
-            <MapPin aria-hidden="true" className="mx-auto mb-2 size-8 text-terracota" strokeWidth={1.75} />
+            <MapPin aria-hidden="true" className="mx-auto mb-2 size-8 text-marca" strokeWidth={1.75} />
             {business.endereco.curto}
           </p>
         </div>
@@ -64,14 +64,14 @@ export function Localizacao() {
       <div className="container-site grid gap-10 lg:grid-cols-2 lg:gap-14">
         <div>
           <h2 id="localizacao-titulo" className="font-display text-[2.1rem] leading-[1.08] font-semibold tracking-[-0.015em] md:text-5xl">
-            Venha nos visitar <em className="font-medium text-terracota">no Socorro</em>
+            Venha nos visitar <em className="font-medium text-marca">no Socorro</em>
           </h2>
           <p className="mt-4 text-lg text-tinta-suave">
             Pode vir pra conhecer a loja, trazer o pet ou deixar sua devolução do Mercado Livre.
           </p>
 
           <address className="mt-8 flex gap-3 not-italic">
-            <MapPin aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-terracota" strokeWidth={1.75} />
+            <MapPin aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-marca" strokeWidth={1.75} />
             <span className="text-lg font-semibold">{business.endereco.completo}</span>
           </address>
 
@@ -86,7 +86,7 @@ export function Localizacao() {
                 {linhas.map((l) => {
                   const ehHoje = hoje !== null && l.dias.includes(hoje)
                   return (
-                    <tr key={l.rotulo} className={cn('border-t border-border first:border-t-0', ehHoje && 'font-bold text-terracota-escuro')}>
+                    <tr key={l.rotulo} className={cn('border-t border-border first:border-t-0', ehHoje && 'font-bold text-marca-escuro')}>
                       <th scope="row" className="py-2.5 font-semibold">
                         {l.rotulo}
                         {ehHoje && <span className="ml-2 rounded-full bg-mostarda px-2 py-0.5 text-xs text-tinta">hoje</span>}

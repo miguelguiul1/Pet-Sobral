@@ -9,10 +9,10 @@ const buttonVariants = cva(
     variants: {
       variant: {
         zap: 'bg-zap text-white hover:bg-zap-escuro shadow-[0_10px_24px_-12px_rgb(14_107_69/0.8)]',
-        primario: 'bg-terracota text-white hover:bg-terracota-escuro',
+        primario: 'bg-marca text-white hover:bg-marca-escuro',
         contorno: 'border-2 border-tinta/80 bg-transparent text-tinta hover:bg-tinta hover:text-creme',
-        claro: 'bg-creme text-terracota-escuro hover:bg-cartao',
-        link: 'text-terracota underline decoration-2 underline-offset-4 hover:text-terracota-escuro hover:decoration-mostarda',
+        claro: 'bg-creme text-marca-escuro hover:bg-cartao',
+        link: 'text-marca underline decoration-2 underline-offset-4 hover:text-marca-escuro hover:decoration-mostarda',
       },
       size: {
         lg: 'min-h-14 rounded-botao px-6 text-[1.0625rem]',

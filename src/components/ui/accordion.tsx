@@ -27,7 +27,7 @@ export function AccordionTrigger({
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(
-          'flex min-h-14 flex-1 items-center justify-between gap-4 py-4 text-left font-display text-lg font-semibold transition-colors hover:text-terracota [&[data-state=open]>svg]:rotate-180',
+          'flex min-h-14 flex-1 items-center justify-between gap-4 py-4 text-left font-display text-lg font-semibold transition-colors hover:text-marca [&[data-state=open]>svg]:rotate-180',
           className,
         )}
         {...props}
@@ -36,7 +36,7 @@ export function AccordionTrigger({
         <ChevronDown
           aria-hidden="true"
           strokeWidth={1.75}
-          className="size-5 shrink-0 text-terracota transition-transform duration-200"
+          className="size-5 shrink-0 text-marca transition-transform duration-200"
         />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>

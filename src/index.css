@@ -23,7 +23,8 @@
 }
 
 /*
- * Direção A · "Quintal da Guarapiranga" (+ selo de preço justo e horário grande da Direção B)
+ * Direção A · "Quintal da Guarapiranga" adaptada à marca real do Pet Sobral:
+ * o azul do logo (#3f3f95) substitui a terracota; creme, mostarda e verde do WhatsApp continuam.
  * Contrastes (WCAG) verificados em scripts/contraste.mjs.
  */
 @theme {
@@ -32,9 +33,10 @@
   --color-cartao: #fbf8f1;
   --color-tinta: #1e2b25;
   --color-tinta-suave: #4a5750;
-  --color-terracota: #9c4a2a;
-  --color-terracota-escuro: #7f3a1f;
-  --color-terracota-claro: #f0d9cc;
+  /* Azul da marca real (logo do Pet Sobral) */
+  --color-marca: #3f3f95;
+  --color-marca-escuro: #2c2c6e;
+  --color-marca-claro: #e3e3f3;
   --color-mostarda: #d9a441;
   --color-mostarda-claro: #f3e2b8;
   --color-zap: #0e6b45;
@@ -43,12 +45,12 @@
   /* tokens shadcn/ui */
   --color-background: var(--color-creme);
   --color-foreground: var(--color-tinta);
-  --color-primary: var(--color-terracota);
+  --color-primary: var(--color-marca);
   --color-primary-foreground: #ffffff;
   --color-muted-foreground: var(--color-tinta-suave);
   --color-border: color-mix(in oklab, var(--color-tinta) 16%, transparent);
   --color-input: #6e7772;
-  --color-ring: var(--color-terracota);
+  --color-ring: var(--color-marca);
   --color-destructive: #a3261b;
 
   --font-display: 'Fraunces Soft', 'Georgia', serif;
@@ -85,7 +87,7 @@
     font-variation-settings: 'SOFT' 100, 'WONK' 0;
   }
   :focus-visible {
-    outline: 3px solid var(--color-terracota);
+    outline: 3px solid var(--color-marca);
     outline-offset: 3px;
     border-radius: 6px;
   }

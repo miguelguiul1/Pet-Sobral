@@ -28,20 +28,23 @@ test.describe('Aberto agora (fuso de SP, navegador em Tóquio)', () => {
 })
 
 for (const largura of [360, 390, 768, 1440]) {
-  test(`layout em ${largura}px: sem rolagem horizontal, logo inteiro, screenshot`, async ({ page }, info) => {
+  test(`layout em ${largura}px: sem rolagem horizontal, logo real inteiro, screenshot`, async ({ page }, info) => {
     await page.setViewportSize({ width: largura, height: 800 })
     await page.clock.setFixedTime(new Date('2026-09-21T10:00:00-03:00'))
     await page.goto('/')
     await page.evaluate(() => document.fonts.ready)
     expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBe(0)
 
-    for (const logo of await page.locator('[data-logo-provisorio]').all()) {
-      const [l, t] = await Promise.all([logo.boundingBox(), logo.locator('[data-plaquinha]').boundingBox()])
-      expect(t!.x).toBeGreaterThanOrEqual(l!.x)
-      expect(t!.x + t!.width).toBeLessThanOrEqual(l!.x + l!.width + 0.5)
-      expect(t!.y + t!.height).toBeLessThanOrEqual(l!.y + l!.height + 0.5)
-      expect(t!.x + t!.width).toBeLessThanOrEqual(largura)
+    // Logo real inteiro dentro da tela e com tamanho legível
+    for (const logo of await page.locator('[data-logo]').all()) {
+      await logo.scrollIntoViewIfNeeded()
+      const b = (await logo.boundingBox())!
+      expect(b.x).toBeGreaterThanOrEqual(0)
+      expect(b.x + b.width).toBeLessThanOrEqual(largura)
+      expect(b.width).toBeGreaterThanOrEqual(90)
+      expect(await logo.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true)
     }
+    await page.evaluate(() => window.scrollTo(0, 0))
 
     // Nenhum conteúdo invade a margem lateral dos containers
     const invasores = await page.evaluate(() => {

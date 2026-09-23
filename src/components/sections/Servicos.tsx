@@ -53,7 +53,7 @@ function escolher(servico: Servico) {
 
 export function Servicos() {
   return (
-    <section id="servicos" aria-labelledby="servicos-titulo" className="bg-terracota py-16 text-creme md:py-24">
+    <section id="servicos" aria-labelledby="servicos-titulo" className="bg-marca py-16 text-creme md:py-24">
       <div className="container-site">
         <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
           <div className="max-w-2xl">
@@ -90,7 +90,7 @@ export function Servicos() {
                     <p className="mt-4 text-sm">
                       <Confirmar neutro={<span className="font-semibold text-tinta-suave">Valor pelo WhatsApp</span>}>
                         a partir de{' '}
-                        <strong className="text-lg text-terracota-escuro">
+                        <strong className="text-lg text-marca-escuro">
                           R$ <span className="marca-confirmar whitespace-nowrap">[CONFIRMAR] preço do {c.titulo.toLowerCase()}</span>
                         </strong>
                       </Confirmar>
@@ -98,7 +98,7 @@ export function Servicos() {
                     <a
                       href="#agendamento"
                       onClick={() => escolher(c.servico!)}
-                      className="group mt-3 inline-flex min-h-11 items-center gap-2 font-bold text-terracota hover:text-terracota-escuro"
+                      className="group mt-3 inline-flex min-h-11 items-center gap-2 font-bold text-marca hover:text-marca-escuro"
                     >
                       {c.acao}
                       <ArrowRight aria-hidden="true" strokeWidth={2} className="size-4.5 transition-transform group-hover:translate-x-1" />

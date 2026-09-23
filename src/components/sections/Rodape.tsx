@@ -13,13 +13,10 @@ const links = [
 
 export function Rodape() {
   return (
-    <footer className="bg-terracota-escuro pt-14 pb-28 text-creme md:pb-14">
+    <footer className="bg-marca-escuro pt-14 pb-28 text-creme md:pb-14">
       <div className="container-site grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
-          {/* Logo em versão clara: o texto herda a cor via [&_*] */}
-          <span className="inline-block text-4xl [&_.text-terracota]:text-mostarda [&_.text-tinta]:text-creme [&_svg]:text-creme">
-            <Logo comLocal />
-          </span>
+          <Logo variante="branco" className="w-40" />
           <p className="mt-4 max-w-xs text-creme/95">Pet shop, banho e tosa no Socorro, zona sul de São Paulo.</p>
           <p className="mt-5 inline-flex rounded-full bg-mostarda px-3.5 py-1.5 text-sm font-bold text-tinta">
             Ponto de devolução do Mercado Livre
@@ -81,7 +78,7 @@ export function Rodape() {
           <a href="/images/CREDITOS.md" className="underline underline-offset-2">
             créditos Unsplash
           </a>
-          . Logo provisório.
+          .
         </p>
       </div>
     </footer>

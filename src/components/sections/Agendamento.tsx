@@ -93,10 +93,10 @@ function Chips({
             key={o.valor}
             className={cn(
               'relative flex min-h-12 cursor-pointer items-center justify-center rounded-xl border-2 px-2 py-2 text-center text-[0.98rem] leading-tight font-semibold transition-[background-color,border-color,transform] duration-150 select-none',
-              'has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-terracota',
+              'has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-marca',
               valor === o.valor
-                ? 'border-terracota bg-terracota text-white motion-safe:scale-[1.02]'
-                : 'border-input bg-cartao text-tinta hover:border-terracota',
+                ? 'border-marca bg-marca text-white motion-safe:scale-[1.02]'
+                : 'border-input bg-cartao text-tinta hover:border-marca',
               erro && valor !== o.valor && 'border-destructive',
               o.desabilitada && 'cursor-not-allowed opacity-45 hover:border-input',
             )}
@@ -204,7 +204,7 @@ export function Agendamento() {
       <div className="container-site grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
         <div className="lg:sticky lg:top-8 lg:self-start">
           <h2 id="agendamento-titulo" className="font-display text-[2.1rem] leading-[1.08] font-semibold tracking-[-0.015em] md:text-5xl">
-            Agende em <em className="font-medium text-terracota">um minuto</em>
+            Agende em <em className="font-medium text-marca">um minuto</em>
           </h2>
           <p className="mt-4 text-lg text-tinta-suave">
             Preencha, toque em enviar e a mensagem já sai pronta no WhatsApp. A gente confirma o horário por lá.
@@ -422,7 +422,7 @@ export function Agendamento() {
                 <button
                   type="button"
                   onClick={() => setMostrarObs(true)}
-                  className="inline-flex min-h-11 items-center font-bold text-terracota underline decoration-2 underline-offset-4 hover:text-terracota-escuro"
+                  className="inline-flex min-h-11 items-center font-bold text-marca underline decoration-2 underline-offset-4 hover:text-marca-escuro"
                 >
                   + Adicionar observação
                 </button>

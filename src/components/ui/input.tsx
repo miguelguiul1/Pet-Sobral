@@ -3,7 +3,7 @@ import type { ComponentProps } from 'react'
 import { cn } from '@/lib/utils'
 
 const campo =
-  'w-full rounded-xl border-2 border-input bg-cartao px-4 text-[1.0625rem] text-tinta placeholder:text-tinta-suave/80 transition-colors focus-visible:border-terracota focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-terracota/20 aria-invalid:border-destructive aria-invalid:ring-destructive/15'
+  'w-full rounded-xl border-2 border-input bg-cartao px-4 text-[1.0625rem] text-tinta placeholder:text-tinta-suave/80 transition-colors focus-visible:border-marca focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-marca/20 aria-invalid:border-destructive aria-invalid:ring-destructive/15'
 
 export function Input({ className, ...props }: ComponentProps<'input'>) {
   return <input data-slot="input" className={cn(campo, 'h-13', className)} {...props} />

@@ -13,14 +13,14 @@ export function Hero() {
     <section aria-labelledby="hero-titulo" className="container-site pt-6 pb-16 md:pt-10 lg:pb-24">
       <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <div>
-          <p className="mb-3 text-[0.78rem] font-bold uppercase tracking-[0.12em] text-terracota sm:text-sm sm:tracking-[0.14em]">
+          <p className="mb-3 text-[0.78rem] font-bold uppercase tracking-[0.12em] text-marca sm:text-sm sm:tracking-[0.14em]">
             Pet shop no Socorro · zona sul de SP
           </p>
           <h1
             id="hero-titulo"
             className="font-display text-[2.45rem] leading-[1.04] font-semibold tracking-[-0.02em] text-balance sm:text-5xl lg:text-[4.1rem]"
           >
-            O banho e tosa de confiança <em className="font-medium text-terracota">aqui do Socorro.</em>
+            O banho e tosa de confiança <em className="font-medium text-marca">aqui do Socorro.</em>
           </h1>
 
           <SeloPrecoJusto className="mt-6" />
@@ -56,7 +56,7 @@ export function Hero() {
                     <Star key={i} className="size-4 fill-current" strokeWidth={0} />
                   ))}
                 </span>
-                <span className="font-semibold underline decoration-border underline-offset-2 group-hover:decoration-terracota">
+                <span className="font-semibold underline decoration-border underline-offset-2 group-hover:decoration-marca">
                   {business.google.avaliacoes} avaliações no Google
                 </span>
                 <span className="sr-only"> (abre em nova aba)</span>
@@ -66,7 +66,7 @@ export function Hero() {
               <StatusLoja className="mb-1" />
               <p className="font-display text-[1.45rem] leading-tight font-semibold md:text-[1.6rem]">
                 <span className="block whitespace-nowrap xl:inline">Seg a sex 9h–19h</span>
-                <span className="hidden text-terracota xl:inline" aria-hidden="true"> · </span>
+                <span className="hidden text-marca xl:inline" aria-hidden="true"> · </span>
                 <span className="block whitespace-nowrap xl:inline">Sáb até 16h30</span>
               </p>
             </div>
@@ -74,8 +74,8 @@ export function Hero() {
         </div>
 
         <div className="relative mx-auto w-full max-w-[26rem] lg:max-w-none">
-          {/* Arco terracota deslocado: dá presença de cor à foto sem virar moldura */}
-          <div aria-hidden="true" className="recorte-arco absolute inset-0 translate-x-3 translate-y-3 bg-terracota md:translate-x-5 md:translate-y-5" />
+          {/* Arco marca deslocado: dá presença de cor à foto sem virar moldura */}
+          <div aria-hidden="true" className="recorte-arco absolute inset-0 translate-x-3 translate-y-3 bg-marca md:translate-x-5 md:translate-y-5" />
           <div className="recorte-arco relative aspect-[4/5] overflow-hidden bg-creme-escuro">
             {/* TROCAR: foto real de um pet atendido no Pet Sobral (foto ilustrativa do Unsplash) */}
             <Foto imagem={imagens.hero} prioridade sizes="(min-width: 1024px) 34rem, (min-width: 640px) 26rem, 92vw" />

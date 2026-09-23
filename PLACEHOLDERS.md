@@ -28,8 +28,8 @@ Para achar no código: pesquise por `CONFIRMAR`, `SUBSTITUIR`, `neutro=` ou `SoN
 | 13 | **Condomínios**: como funciona, raio/bairros, frequência, busca e leva, condição especial | Seção Condomínios, bloco "Como funciona" | "Para saber como funciona o atendimento no seu condomínio, fale com a gente pelo WhatsApp." | `sections/Condominios.tsx` |
 | 14 | **Instagram** / redes sociais | Rodapé | **Oculto** | `sections/Rodape.tsx` |
 | 15 | **CNPJ / razão social** | Rodapé | **Oculto** (fica "© 2026 Pet Sobral.") | idem |
-| 16 | **Domínio** definitivo | canonical, og:url, sitemap | `pet-sobral-preview.vercel.app` | `.env` (`VITE_SITE_URL`) |
-| 17 | **Logo** oficial, se existir (o atual é tipográfico e provisório) | Cabeçalho, rodapé, favicon, OG | Logo provisório | `components/Logo.tsx`, `public/favicon.svg`, `scripts/og/og.html` |
+| 16 | **Domínio** definitivo. O logo traz `www.petsobral.com.br`: confirmar se o domínio é do dono e se está ativo | canonical, og:url, sitemap | `pet-sobral-preview.vercel.app` (a URL do logo foi omitida no site) | `.env` (`VITE_SITE_URL`) |
+| 17 | **Arquivo original do logo** (PDF/SVG/AI/PNG grande). O site usa uma vetorização feita a partir do JPG 365×365 recebido; o dono precisa aprovar | Cabeçalho, rodapé, favicon, OG | Logo real vetorizado | `public/marca/`, `public/favicon.svg`, `components/Logo.tsx` |
 
 ## Dados do Google Maps (coletados no Maps, não precisam do dono)
 

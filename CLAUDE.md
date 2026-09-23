@@ -21,7 +21,7 @@ Esses dados vivem em **um único arquivo** (`src/data/business.ts`). Componentes
 1. **Não invente dados.** Preços, nomes de funcionários, tempo de mercado, redes sociais, CNPJ, formas de pagamento, raças atendidas, coordenadas exatas: tudo que não está na tabela acima vira `[CONFIRMAR COM O CLIENTE]` e entra no `PLACEHOLDERS.md`.
 2. **Depoimentos:** 3 cards com texto placeholder claramente marcado para troca por avaliações reais do Google. Nunca escreva depoimentos fictícios atribuídos a pessoas com nome.
 3. **Imagens:** placeholders do Unsplash (licença livre), salvos localmente em `public/images/` com nomes descritivos (`hero-cachorro-banho.webp`, `servico-tosa.webp`…) e um comentário `{/* TROCAR: foto real de … */}` no ponto de uso. O inventário fica em `public/images/README.md`.
-4. **Logo** é tipográfico e **provisório**, marcado assim no código e no PLACEHOLDERS.md.
+4. **Logo real** do Pet Sobral (cachorro em traço + "PET SOBRAL", azul `#3f3f95`), vetorizado em `public/marca/` a partir do JPG 365×365 recebido (`docs/marca/logo-original-recebido.jpg`). Pedir o arquivo original ao dono; a URL `www.petsobral.com.br` do logo foi omitida no site até o domínio ser confirmado.
 5. **Commits separados por etapa**, mensagens claras em português (`feat: seção de agendamento com envio via WhatsApp`).
 6. Toda afirmação de marketing precisa ter base nos dados reais (ex.: "preço justo" vem das avaliações; "4.8 no Google" é real). Nada de "o melhor de SP", "desde 19XX", "+ de 5 mil pets atendidos".
 7. O selo diz **"Preço justo no banho e tosa"**, sempre atribuído aos clientes. Nunca "mais barato", "menor preço" ou comparação com concorrentes; a frase "nenhum concorrente da região faz isso" não entra no site nem no kit de venda.
@@ -111,7 +111,7 @@ Em `.claude/agents/` (catálogo Agency Agents, MIT). Papel de cada um:
 | Persona Walkthrough Specialist | walkthrough rolando a página como o tutor apressado no celular |
 | UX Architect | arquitetura da página, tokens, sistema de layout |
 | UI Designer | direção visual, componentes, estados |
-| Brand Guardian | identidade, tom de voz, logo provisório |
+| Brand Guardian | identidade, tom de voz, aplicação da marca real |
 | Content Creator | copy pt-BR |
 | SEO Specialist | SEO local, schema, meta |
 | Frontend Developer | implementação |
