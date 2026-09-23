@@ -23,8 +23,8 @@ const { render, jsonLd } = await import(pathToFileURL(path.join(raiz, 'dist-ssr'
 
 let html = await readFile(path.join(dist, 'index.html'), 'utf8')
 const assets = await readdir(path.join(dist, 'assets'))
-// As duas fontes do título (normal + itálico) aparecem no H1, que é o elemento LCP
-const fontesTitulo = assets.filter((a) => /^fraunces-soft-(normal|italic).*\.woff2$/.test(a))
+// Fonte do título (Figtree, subset latino): o H1 é o elemento LCP
+const fontesTitulo = assets.filter((a) => /^figtree-latin-wght-normal.*\.woff2$/.test(a))
 
 // CSS inline (≈9 kB gzip): elimina a requisição que bloqueia a renderização
 const cssLink = html.match(/<link rel="stylesheet"[^>]*href="\/assets\/([^"]+\.css)"[^>]*>/)

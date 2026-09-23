@@ -38,7 +38,8 @@ Esses dados vivem em **um único arquivo** (`src/data/business.ts`). Componentes
 - Sem backend. Formulário gera link `https://wa.me/5511976964074?text=…`
 - Pré-renderização estática do HTML no build (SEO local e LCP): a página precisa ter o conteúdo no HTML servido, não só após o JS rodar.
 - Testes: Playwright (fluxo de agendamento, breakpoints, "aberto agora", placeholders), Lighthouse para as metas de nota.
-- **O build roda no Windows sem Python.** As fontes enxutas da Fraunces estão commitadas em `src/assets/fonts/` como arquivos prontos; fonttools só seria necessário para regenerá-las (comando no comentário de `src/index.css`).
+- **O build roda no Windows sem Python.** Uma única família de fonte (Figtree, via npm/fontsource); nada é gerado com Python no build.
+- **Identidade visual = a marca real da loja:** azul `#3f3f95` dominante com branco (como o logo), títulos em sans pesada (Figtree 800), o cachorro em traço do logo como elemento gráfico (`public/marca/cachorro-*.svg`, `components/CachorroTraco.tsx`, `components/Rotulo.tsx`), fotos com cantos arredondados e borda branca. Mostarda só como acento; verde só no WhatsApp. Sem patinhas espalhadas.
 - Microinterações (Whimsy Injector só sugere): nada que atrase o botão de agendar ou derrube a Performance abaixo de 95.
 - Deploy: Vercel (projeto `pet-sobral-preview`, branch `main`).
 

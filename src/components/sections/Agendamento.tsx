@@ -1,3 +1,4 @@
+import { Rotulo } from '@/components/Rotulo'
 import { CircleAlert } from 'lucide-react'
 import { useEffect, useId, useMemo, useRef, useState, type FormEvent, type ReactNode } from 'react'
 import { Confirmar } from '@/components/Confirmar'
@@ -203,8 +204,9 @@ export function Agendamento() {
     <section id="agendamento" aria-labelledby="agendamento-titulo" data-esconde-fab className="py-16 md:py-24">
       <div className="container-site grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
         <div className="lg:sticky lg:top-8 lg:self-start">
-          <h2 id="agendamento-titulo" className="font-display text-[2.1rem] leading-[1.08] font-semibold tracking-[-0.015em] md:text-5xl">
-            Agende em <em className="font-medium text-marca">um minuto</em>
+          <Rotulo>Agendamento</Rotulo>
+          <h2 id="agendamento-titulo" className="font-display text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.03em] md:text-5xl">
+            Agende em <em className="not-italic text-marca">um minuto</em>
           </h2>
           <p className="mt-4 text-lg text-tinta-suave">
             Preencha, toque em enviar e a mensagem já sai pronta no WhatsApp. A gente confirma o horário por lá.
@@ -213,7 +215,7 @@ export function Agendamento() {
             {['Escolha o serviço e conte sobre o pet', 'Diga o dia e o período que prefere', 'Envie pelo WhatsApp e aguarde a confirmação'].map(
               (t, i) => (
                 <li key={t} className="flex items-center gap-4">
-                  <span className="grid size-10 shrink-0 place-items-center rounded-full bg-mostarda font-display text-lg font-semibold">
+                  <span className="grid size-10 shrink-0 place-items-center rounded-full bg-mostarda font-display text-lg font-extrabold">
                     {i + 1}
                   </span>
                   <span className="font-semibold">{t}</span>
@@ -227,7 +229,7 @@ export function Agendamento() {
           noValidate
           onSubmit={enviar}
           aria-labelledby="agendamento-titulo"
-          className="rounded-cartao bg-cartao p-5 shadow-[0_24px_60px_-40px_rgb(30_43_37/0.6)] ring-1 ring-border sm:p-8"
+          className="rounded-cartao bg-white p-5 shadow-[0_24px_60px_-40px_rgb(30_43_37/0.6)] ring-1 ring-border sm:p-8"
         >
           <p className="mb-6 text-sm text-tinta-suave">Todos os campos são obrigatórios, menos Observações.</p>
 

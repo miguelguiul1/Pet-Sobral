@@ -13,7 +13,7 @@ const links = [
 
 export function Rodape() {
   return (
-    <footer className="bg-marca-escuro pt-14 pb-28 text-creme md:pb-14">
+    <footer className="bg-marca pt-14 pb-28 text-creme md:pb-14">
       <div className="container-site grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
           <Logo variante="branco" className="w-40" />
@@ -24,7 +24,7 @@ export function Rodape() {
         </div>
 
         <div>
-          <h2 className="font-display text-xl font-semibold text-mostarda-claro">Contato</h2>
+          <h2 className="font-display text-xl font-extrabold text-mostarda-claro">Contato</h2>
           <dl className="mt-3 space-y-3">
             <div>
               <dt className="text-sm font-bold uppercase tracking-wider text-creme/90">Endereço</dt>
@@ -51,7 +51,7 @@ export function Rodape() {
         </div>
 
         <div>
-          <h2 className="font-display text-xl font-semibold text-mostarda-claro">Navegue</h2>
+          <h2 className="font-display text-xl font-extrabold text-mostarda-claro">Navegue</h2>
           <ul className="mt-2">
             {links.map((l) => (
               <li key={l.href}>

@@ -1,3 +1,4 @@
+import { Rotulo } from '@/components/Rotulo'
 import { MapPin, Navigation, Package } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { IconeWhatsApp } from '@/components/IconeWhatsApp'
@@ -63,8 +64,9 @@ export function Localizacao() {
     <section id="localizacao" aria-labelledby="localizacao-titulo" className="bg-cartao py-16 md:py-24">
       <div className="container-site grid gap-10 lg:grid-cols-2 lg:gap-14">
         <div>
-          <h2 id="localizacao-titulo" className="font-display text-[2.1rem] leading-[1.08] font-semibold tracking-[-0.015em] md:text-5xl">
-            Venha nos visitar <em className="font-medium text-marca">no Socorro</em>
+          <Rotulo>Onde estamos</Rotulo>
+          <h2 id="localizacao-titulo" className="font-display text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.03em] md:text-5xl">
+            Venha nos visitar <em className="not-italic text-marca">no Socorro</em>
           </h2>
           <p className="mt-4 text-lg text-tinta-suave">
             Pode vir pra conhecer a loja, trazer o pet ou deixar sua devolução do Mercado Livre.
@@ -77,7 +79,7 @@ export function Localizacao() {
 
           <div className="mt-8 rounded-cartao bg-creme p-5 ring-1 ring-border">
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <h3 className="font-display text-xl font-semibold">Horário</h3>
+              <h3 className="font-display text-xl font-extrabold">Horário</h3>
               <StatusLoja />
             </div>
             <table className="mt-3 w-full text-left">
@@ -91,7 +93,7 @@ export function Localizacao() {
                         {l.rotulo}
                         {ehHoje && <span className="ml-2 rounded-full bg-mostarda px-2 py-0.5 text-xs text-tinta">hoje</span>}
                       </th>
-                      <td className="py-2.5 text-right font-display text-lg font-semibold">{l.valor}</td>
+                      <td className="py-2.5 text-right font-display text-lg font-extrabold">{l.valor}</td>
                     </tr>
                   )
                 })}

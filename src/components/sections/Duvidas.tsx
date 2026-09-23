@@ -1,3 +1,4 @@
+import { Rotulo } from '@/components/Rotulo'
 import type { ReactNode } from 'react'
 import { Confirmar } from '@/components/Confirmar'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
@@ -69,9 +70,12 @@ export function Duvidas() {
   return (
     <section id="duvidas" aria-labelledby="duvidas-titulo" className="py-16 md:py-24">
       <div className="container-site grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-        <h2 id="duvidas-titulo" className="font-display text-[2.1rem] leading-[1.08] font-semibold tracking-[-0.015em] md:text-5xl">
+        <div>
+          <Rotulo>Dúvidas</Rotulo>
+          <h2 id="duvidas-titulo" className="font-display text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.03em] md:text-5xl">
           Perguntas frequentes
-        </h2>
+          </h2>
+        </div>
         <Accordion type="single" collapsible className="border-t border-border">
           {perguntas
             .filter((q) => revisao || !q.soRevisao)

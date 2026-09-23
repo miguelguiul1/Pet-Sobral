@@ -1,3 +1,4 @@
+import { Rotulo } from '@/components/Rotulo'
 import { ExternalLink, Quote } from 'lucide-react'
 import { Confirmar } from '@/components/Confirmar'
 import { business, notaFormatada } from '@/data/business'
@@ -25,10 +26,10 @@ function CardPlaceholder({ tema }: { tema: string }) {
 /** Modo padrão: sem citações inventadas, só os temas que de fato aparecem nas avaliações. */
 function CardTema({ tema }: { tema: string }) {
   return (
-    <div className="flex h-full flex-col rounded-cartao bg-cartao p-6 ring-1 ring-border">
+    <div className="flex h-full flex-col rounded-cartao bg-white p-6 ring-1 ring-border">
       <span aria-hidden="true" className="size-3 rounded-full bg-mostarda" />
       <p className="mt-4 text-sm font-bold uppercase tracking-[0.12em] text-marca">Elogio frequente</p>
-      <p className="mt-1 font-display text-2xl leading-snug font-semibold first-letter:uppercase">{tema}</p>
+      <p className="mt-1 font-display text-2xl leading-snug font-extrabold first-letter:uppercase">{tema}</p>
     </div>
   )
 }
@@ -40,7 +41,8 @@ export function Depoimentos() {
       <div className="container-site">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 id="depoimentos-titulo" className="font-display text-[2.1rem] leading-[1.08] font-semibold tracking-[-0.015em] md:text-5xl">
+            <Rotulo>Avaliações</Rotulo>
+            <h2 id="depoimentos-titulo" className="font-display text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.03em] md:text-5xl">
               {revisao ? 'Quem já trouxe o pet, conta' : 'O que mais aparece nas avaliações'}
             </h2>
             <p className="mt-3 text-lg font-semibold text-tinta-suave">

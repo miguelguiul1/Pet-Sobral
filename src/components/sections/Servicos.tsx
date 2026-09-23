@@ -1,3 +1,4 @@
+import { Rotulo } from '@/components/Rotulo'
 import { ArrowRight } from 'lucide-react'
 import { Confirmar, SoNaRevisao } from '@/components/Confirmar'
 import { Foto } from '@/components/Foto'
@@ -53,14 +54,15 @@ function escolher(servico: Servico) {
 
 export function Servicos() {
   return (
-    <section id="servicos" aria-labelledby="servicos-titulo" className="bg-marca py-16 text-creme md:py-24">
+    <section id="servicos" aria-labelledby="servicos-titulo" className="bg-creme py-16 md:py-24">
       <div className="container-site">
         <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
           <div className="max-w-2xl">
-            <h2 id="servicos-titulo" className="font-display text-[2.1rem] leading-[1.08] font-semibold tracking-[-0.015em] text-balance md:text-5xl">
+            <Rotulo>Serviços</Rotulo>
+            <h2 id="servicos-titulo" className="font-display text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.03em] text-balance md:text-5xl">
               Banho e tosa no Socorro, e o que mais seu pet precisar
             </h2>
-            <p className="mt-4 text-lg text-creme/95">
+            <p className="mt-4 text-lg text-tinta-suave">
               Tudo num lugar só, pertinho de casa.{' '}
               <Confirmar neutro="O valor para o seu pet a gente passa pelo WhatsApp.">
                 [CONFIRMAR COM O CLIENTE: texto com preços] Os preços abaixo são o ponto de partida; o valor certinho a gente passa
@@ -68,12 +70,12 @@ export function Servicos() {
               </Confirmar>
             </p>
           </div>
-          <SeloPrecoJusto claro />
+          <SeloPrecoJusto />
         </div>
 
         <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {cards.map((c) => (
-            <li key={c.titulo} className="flex flex-col overflow-hidden rounded-cartao bg-cartao text-tinta">
+            <li key={c.titulo} className="flex flex-col overflow-hidden rounded-cartao bg-white text-tinta shadow-[0_20px_40px_-32px_rgb(30_43_37/0.5)] ring-1 ring-border">
               <div className="aspect-[4/3] overflow-hidden">
                 {/* TROCAR: foto real do serviço no Pet Sobral (foto ilustrativa do Unsplash) */}
                 <Foto
@@ -83,7 +85,7 @@ export function Servicos() {
                 />
               </div>
               <div className="flex flex-1 flex-col p-5">
-                <h3 className="font-display text-2xl font-semibold">{c.titulo}</h3>
+                <h3 className="font-display text-2xl font-extrabold">{c.titulo}</h3>
                 <p className="mt-2 flex-1 text-[0.98rem] text-tinta-suave">{c.texto}</p>
                 {c.servico ? (
                   <>
@@ -122,7 +124,7 @@ export function Servicos() {
         </ul>
 
         <SoNaRevisao>
-          <p className="mt-6 text-sm text-creme/95">
+          <p className="mt-6 text-sm text-tinta-suave">
             O valor pode variar conforme o porte e a pelagem do pet.{' '}
             <Confirmar>[CONFIRMAR COM O CLIENTE: o preço varia por porte/pelagem? quais faixas?]</Confirmar>
           </p>

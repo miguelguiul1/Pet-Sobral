@@ -21,7 +21,10 @@ export function App() {
         Pular para o conteúdo
       </a>
       <AvisoRevisao />
-      <Cabecalho />
+      {/* Topo em azul com branco, como o logo da loja (o Hero continua a faixa azul) */}
+      <div className="bg-marca text-white">
+        <Cabecalho />
+      </div>
       <main id="conteudo" tabIndex={-1} className="outline-none">
         <Hero />
         <Servicos />
