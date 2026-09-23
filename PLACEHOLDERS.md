@@ -29,7 +29,7 @@ Para achar no código: pesquise por `CONFIRMAR`, `SUBSTITUIR`, `neutro=` ou `SoN
 | 14 | **Instagram** / redes sociais | Rodapé | **Oculto** | `sections/Rodape.tsx` |
 | 15 | **CNPJ / razão social** | Rodapé | **Oculto** (fica "© 2026 Pet Sobral.") | idem |
 | 16 | **Domínio** definitivo. O logo traz `www.petsobral.com.br`: confirmar se o domínio é do dono e se está ativo | canonical, og:url, sitemap | `pet-sobral-preview.vercel.app` (a URL do logo foi omitida no site) | `.env` (`VITE_SITE_URL`) |
-| 17 | **Arquivo original do logo** (vetor: PDF/SVG/AI/EPS, ou PNG em alta resolução). O site usa uma vetorização feita por nós a partir do JPG 365×365 recebido, e o "L" final vem cortado na borda do próprio JPG | Cabeçalho, rodapé, favicon, OG, rótulos das seções | Logo real vetorizado | `public/marca/`, `public/favicon.svg`, `src/assets/marca/`, `components/Logo.tsx` |
+| 17 | **Logo vetorizado a partir de JPG cortado; L reconstruído; substituir pelo arquivo original do dono** (vetor: PDF/SVG/AI/EPS, ou PNG em alta resolução). O pé do "L" final foi completado com a mesma espessura e o mesmo comprimento do braço inferior do "E" (comparação em `docs/marca/comparacao-L-3x.png`) | Cabeçalho, rodapé, favicon, OG, rótulos das seções | Logo real vetorizado | `public/marca/`, `public/favicon.svg`, `src/assets/marca/`, `components/Logo.tsx` |
 | 18 | **Autorização do dono para usar a marca** (logo, cachorro em traço e cores) no site | Todo o site | Marca usada no protótipo de apresentação | — |
 
 ## Dados do Google Maps (coletados no Maps, não precisam do dono)
